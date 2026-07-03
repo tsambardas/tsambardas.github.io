@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login (Demo) | MyBank — Fictional Bank Website</title>
+    <meta name="description" content="Static demo of the MyBank PHP login system. Fictional student portfolio project by Tulay Tsambardas.">
+    <meta name="author" content="Tulay Tsambardas, tulaytsambardasdesign@gmail.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/credit.css">
+    <style>
+        body {
+            font: 14px sans-serif;
+            background-image: url(images/loginbackground.png);
+        }
+
+        .wrapper {
+            width: 360px;
+            padding: 20px;
+            margin: auto;
+            background-color: white;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border: 2px solid orange;
+            border-radius: 12px;
+        }
+
+        input[type=submit] {
+            background-color: orange;
+            border: orange;
+        }
+
+        .demo-note {
+            font-size: 12px;
+            background: #eef6f0;
+            border: 1px solid #73ac7e;
+            border-radius: 6px;
+            padding: 8px 10px;
+            color: #2f5138;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-banner">Fictional website — demo login only. No real accounts, no data is stored.
+        <a href="mybank_index.html">Back to MyBank home</a>
+    </div>
+
+    <div class="wrapper">
+        <h2>Login</h2>
+        <p>Please fill in your credentials to login.</p>
+
+        <p class="demo-note">
+            <strong>Demo version:</strong> this page imitates my PHP + MySQL login system so it can run
+            on static hosting. Try username <strong>demo</strong> with password <strong>demo1234</strong>.
+            The real server-side code (<code>login.php</code>, hashed passwords, prepared statements)
+            is included in the project source.
+        </p>
+
+        <div id="loginError" class="alert alert-danger" style="display:none;">Invalid username or password.</div>
+
+        <div id="loginSuccess" class="alert alert-success" style="display:none;">
+            <strong>Hi, demo. Welcome to MyBank.</strong><br>
+            In the PHP version you would now be redirected to your account dashboard (welcome.php).
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" class="form-control" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Login">
+            </div>
+            <p>Don't have an account? <span class="text-muted">Registration is available in the PHP version.</span></p>
+        </form>
+    </div>
+
+    <footer class="site-credit">
+        <p class="credit-monogram">TT</p>
+        <p class="credit-name">Tulay Tsambardas</p>
+        <p class="credit-role">Digital Designer</p>
+        <p class="credit-copy">&copy; 2026 All rights reserved.</p>
+        <p class="credit-note">MyBank is a fictional brand created for a student project. It is not a real bank and
+            does not collect or store any personal information.</p>
+    </footer>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var username = document.getElementById("username").value.trim();
+            var password = document.getElementById("password").value;
+            var errorBox = document.getElementById("loginError");
+            var successBox = document.getElementById("loginSuccess");
+
+            if (username === "demo" && password === "demo1234") {
+                errorBox.style.display = "none";
+                successBox.style.display = "block";
+            } else {
+                successBox.style.display = "none";
+                errorBox.style.display = "block";
+            }
+        });
+    </script>
+</body>
+
+</html>

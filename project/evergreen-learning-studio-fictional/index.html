@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Evergreen Learning Studio — Özel Eğitim Destek Stüdyosu</title>
+<meta name="description" content="Evergreen Learning Studio — Özel eğitim ve okul öncesi alanında 15+ yıllık örnek deneyime sahip öğretmen."/>
+<meta property="og:title" content="Evergreen Learning Studio"/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#1A2A22;--paper:#F7F3EA;--paper-2:#FCFAF4;--surface:#FFFFFF;
+  --green-900:#143A2E;--green-800:#1B4537;--green-700:#275746;
+  --green-100:#E3ECE3;--green-50:#EEF3EC;
+  --amber:#D29239;--amber-soft:#F1E2C5;
+  --muted:#56655C;--line:#E2DDCD;--line-green:#D4DED3;
+  --shadow:0 1px 2px rgba(20,58,46,.04),0 8px 28px rgba(20,58,46,.07);
+  --radius:18px;--maxw:1080px;
+}
+*{box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em;margin:0;}
+p{margin:0;}a{color:inherit;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--amber);}
+/* NAV */
+header.nav{position:sticky;top:0;z-index:100;background:rgba(247,243,234,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px;}
+.brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.15rem;text-decoration:none;flex:none;}
+.brand span{color:var(--amber);}
+.nav-links{display:flex;gap:22px;align-items:center;}
+.nav-links a{text-decoration:none;font-size:.9rem;font-weight:500;color:var(--muted);transition:color .18s;}
+.nav-links a:hover{color:var(--green-800);}
+.nav-right{display:flex;align-items:center;gap:12px;flex:none;}
+/* LANGUAGE SWITCHER */
+.lang-wrap{position:relative;}
+.lang-btn{
+  display:inline-flex;align-items:center;gap:6px;cursor:pointer;
+  background:var(--surface);border:1.5px solid var(--line-green);border-radius:999px;
+  padding:7px 13px;font-family:"Figtree",sans-serif;font-size:.88rem;font-weight:600;
+  color:var(--green-800);transition:border-color .18s,background .18s;
+}
+.lang-btn:hover{border-color:var(--green-700);background:var(--green-50);}
+.lang-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .2s;}
+.lang-btn.open svg{transform:rotate(180deg);}
+.lang-menu{
+  position:absolute;top:calc(100% + 8px);right:0;
+  background:var(--surface);border:1.5px solid var(--line-green);border-radius:14px;
+  box-shadow:0 8px 28px rgba(20,58,46,.12);overflow:hidden;min-width:140px;
+  opacity:0;transform:translateY(-6px) scale(.97);pointer-events:none;
+  transition:opacity .18s,transform .18s;
+}
+.lang-menu.open{opacity:1;transform:none;pointer-events:all;}
+.lang-menu button{
+  display:flex;align-items:center;gap:10px;width:100%;padding:11px 16px;
+  background:none;border:none;font-family:"Figtree",sans-serif;font-size:.92rem;
+  font-weight:500;color:var(--ink);cursor:pointer;transition:background .15s;text-align:left;
+}
+.lang-menu button:hover{background:var(--green-50);}
+.lang-menu button.active{color:var(--green-800);font-weight:700;}
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:"Figtree",sans-serif;font-weight:600;font-size:.95rem;padding:11px 20px;border-radius:999px;text-decoration:none;cursor:pointer;border:1.5px solid transparent;transition:transform .15s ease,box-shadow .2s ease,background .2s,color .2s;}
+.btn-primary{background:var(--amber);color:#221603;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(210,146,57,.35);}
+.btn-ghost{background:transparent;border-color:rgba(244,238,226,.5);color:#F4EEE2;}
+.btn-ghost:hover{background:rgba(244,238,226,.12);transform:translateY(-2px);}
+.btn-green{background:var(--green-800);color:#F4EEE2;}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(27,69,55,.32);}
+.btn-outline{background:transparent;border-color:var(--green-700);color:var(--green-800);}
+.btn-outline:hover{background:var(--green-50);}
+.icon{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:1.7;}
+/* HERO */
+.hero{background:var(--green-900);color:#F4EEE2;position:relative;overflow:hidden;}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 85% 12%,rgba(210,146,57,.18),transparent 60%),radial-gradient(50% 60% at 8% 95%,rgba(118,166,130,.16),transparent 60%);pointer-events:none;}
+.hero-inner{position:relative;z-index:1;padding:84px 24px 92px;max-width:var(--maxw);margin:0 auto;}
+.hero .eyebrow{color:var(--amber);}
+.hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:600;margin:18px 0 0;max-width:18ch;color:#FBF6EC;}
+.hero h1 em{font-style:italic;color:var(--amber);}
+.hero .lede{margin-top:26px;max-width:54ch;font-size:1.08rem;line-height:1.7;color:rgba(244,238,226,.86);}
+.hero-meta{margin-top:30px;display:flex;flex-wrap:wrap;gap:10px 22px;font-size:.95rem;color:rgba(244,238,226,.78);}
+.hero-meta span{display:inline-flex;align-items:center;gap:8px;}
+.hero-cta{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px;}
+/* SECTIONS */
+section{padding:84px 0;}
+.sec-head{max-width:640px;margin-bottom:48px;}
+.sec-head h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-top:10px;}
+.sec-head p{margin-top:14px;color:var(--muted);}
+/* ABOUT */
+.about{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.about-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:48px;align-items:start;}
+.lead-text{font-size:1.18rem;line-height:1.75;}
+.lead-text strong{color:var(--green-800);font-weight:600;}
+.stat-card{background:var(--green-900);color:#F4EEE2;border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow);}
+.stat-row{display:flex;align-items:baseline;gap:14px;padding:16px 0;border-bottom:1px solid rgba(244,238,226,.14);}
+.stat-row:last-child{border-bottom:none;}
+.stat-num{font-family:"Fraunces",serif;font-size:2rem;font-weight:600;color:var(--amber);line-height:1;min-width:84px;}
+.stat-lbl{font-size:.95rem;color:rgba(244,238,226,.82);}
+/* TIMELINE */
+.timeline{position:relative;margin-top:8px;padding-left:36px;}
+.timeline::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--amber),var(--line-green));}
+.tl-item{position:relative;padding:0 0 44px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-item::before{content:"";position:absolute;left:-32px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--paper-2);border:3px solid var(--amber);}
+.tl-period{font-size:.82rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);}
+.tl-role{font-family:"Fraunces",serif;font-size:1.3rem;font-weight:600;margin:6px 0 2px;}
+.tl-org{color:var(--green-700);font-weight:600;font-size:.98rem;}
+.tl-org .place{color:var(--muted);font-weight:500;}
+.tl-list{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:9px;}
+.tl-list li{position:relative;padding-left:24px;color:var(--muted);font-size:.98rem;}
+.tl-list li::before{content:"";position:absolute;left:4px;top:11px;width:7px;height:7px;border-radius:2px;background:var(--green-100);border:1.5px solid var(--green-700);}
+/* EXPERTISE */
+.expertise{background:var(--green-50);border-top:1px solid var(--line-green);border-bottom:1px solid var(--line-green);}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.card{background:var(--surface);border:1px solid var(--line-green);border-radius:var(--radius);padding:28px 26px;box-shadow:var(--shadow);transition:transform .18s ease,box-shadow .22s ease;}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(20,58,46,.12);}
+.card-ico{width:46px;height:46px;border-radius:12px;background:var(--amber-soft);display:flex;align-items:center;justify-content:center;color:var(--green-800);margin-bottom:16px;}
+.card-ico .icon{width:24px;height:24px;stroke-width:1.6;}
+.card h3{font-size:1.15rem;margin-bottom:8px;}
+.card p{color:var(--muted);font-size:.96rem;}
+/* SERVICES */
+.services{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.service-card{background:var(--surface);border:1.5px solid var(--line-green);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .22s ease;}
+.service-card:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(20,58,46,.12);}
+.service-card.featured{border-color:var(--amber);background:linear-gradient(160deg,#FFFBF2,var(--surface));}
+.service-badge{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--amber-soft);color:var(--green-800);margin-bottom:16px;align-self:flex-start;}
+.service-card.featured .service-badge{background:var(--amber);color:#221603;}
+.service-card h3{font-size:1.18rem;margin-bottom:10px;}
+.service-card .desc{color:var(--muted);font-size:.96rem;flex:1;}
+.service-meta{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;}
+.service-duration{font-size:.9rem;color:var(--muted);display:flex;align-items:center;gap:6px;}
+.service-price{font-family:"Fraunces",serif;font-size:1.4rem;font-weight:600;color:var(--green-800);}
+.service-price span{font-family:"Figtree",sans-serif;font-size:.8rem;color:var(--muted);font-weight:500;}
+.service-includes{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:8px;}
+.service-includes li{font-size:.9rem;color:var(--muted);padding-left:22px;position:relative;}
+.service-includes li::before{content:"✓";position:absolute;left:0;color:var(--amber);font-weight:700;}
+.forms{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+/* BOOKING */
+.booking{background:var(--green-900);color:#F4EEE2;}
+.booking .eyebrow{color:var(--amber);}
+.booking .sec-head h2{color:#FBF6EC;}
+.booking .sec-head p{color:rgba(244,238,226,.8);}
+.booking-grid{display:grid;grid-template-columns:.45fr .55fr;gap:44px;align-items:start;}
+.booking-info{display:grid;gap:16px;}
+.booking-rule{background:rgba(244,238,226,.07);border:1px solid rgba(244,238,226,.14);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;}
+.booking-rule .ic{width:40px;height:40px;flex:none;border-radius:10px;background:rgba(210,146,57,.2);display:flex;align-items:center;justify-content:center;color:var(--amber);}
+.booking-rule strong{display:block;font-size:.98rem;color:#F4EEE2;margin-bottom:3px;}
+.booking-rule p{font-size:.9rem;color:rgba(244,238,226,.72);}
+.cal-embed-wrap{background:var(--surface);border-radius:var(--radius);overflow:hidden;min-height:540px;box-shadow:0 20px 60px rgba(0,0,0,.25);}
+.cal-placeholder{min-height:540px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 32px;background:var(--paper-2);color:var(--ink);}
+.cal-placeholder .setup-badge{display:inline-block;background:var(--amber-soft);color:var(--green-800);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:999px;margin-bottom:20px;}
+.cal-placeholder h3{font-size:1.4rem;margin-bottom:12px;}
+.cal-placeholder p{color:var(--muted);font-size:.96rem;max-width:36ch;margin:0 auto;}
+.setup-steps{margin-top:26px;text-align:left;width:100%;max-width:340px;display:grid;gap:14px;}
+.setup-step{display:flex;align-items:flex-start;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;}
+.setup-step .num{width:28px;height:28px;border-radius:50%;background:var(--green-800);color:#fff;font-size:.85rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none;}
+.setup-step .txt{font-size:.9rem;color:var(--muted);}
+.setup-step .txt strong{color:var(--ink);display:block;margin-bottom:2px;}
+/* PAYMENT */
+.payment{background:var(--paper-2);border-top:1px solid var(--line);}
+.payment-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;}
+.workflow{display:flex;flex-direction:column;}
+.wf-step{display:flex;gap:18px;align-items:flex-start;position:relative;}
+.wf-step:not(:last-child)::after{content:"";position:absolute;left:21px;top:46px;bottom:-16px;width:2px;background:linear-gradient(var(--line-green),transparent);}
+.wf-num{width:44px;height:44px;border-radius:50%;background:var(--green-900);color:var(--amber);font-family:"Fraunces",serif;font-size:1.1rem;font-weight:600;display:flex;align-items:center;justify-content:center;flex:none;}
+.wf-body{padding-bottom:32px;}
+.wf-body strong{display:block;font-size:1.02rem;color:var(--ink);margin-bottom:4px;}
+.wf-body p{color:var(--muted);font-size:.94rem;}
+.iban-card{background:var(--surface);border:1.5px solid var(--line-green);border-radius:var(--radius);padding:30px 28px;box-shadow:var(--shadow);}
+.iban-header{display:flex;align-items:center;gap:14px;margin-bottom:26px;padding-bottom:20px;border-bottom:1px solid var(--line);}
+.iban-logo{width:48px;height:48px;border-radius:12px;background:var(--green-900);display:flex;align-items:center;justify-content:center;color:var(--amber);}
+.iban-header h3{font-size:1.15rem;margin-bottom:2px;}
+.iban-header p{font-size:.88rem;color:var(--muted);}
+.iban-row{padding:13px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:4px;}
+.iban-row:last-child{border-bottom:none;}
+.iban-lbl{font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);}
+.iban-val{font-size:1rem;font-weight:600;color:var(--ink);word-break:break-all;}
+.iban-val.mono{font-family:monospace;letter-spacing:.04em;}
+.copy-btn{display:inline-flex;align-items:center;gap:6px;margin-top:6px;background:var(--green-50);border:1px solid var(--line-green);border-radius:8px;padding:5px 12px;font-size:.82rem;font-weight:600;color:var(--green-800);cursor:pointer;transition:background .15s;font-family:"Figtree",sans-serif;}
+.copy-btn:hover{background:var(--green-100);}
+.payment-note{margin-top:20px;background:var(--amber-soft);border:1px solid rgba(210,146,57,.3);border-radius:12px;padding:14px 16px;font-size:.9rem;color:var(--green-800);display:flex;align-items:flex-start;gap:10px;}
+/* EDUCATION */
+.edu-sec{background:var(--paper-2);border-top:1px solid var(--line);}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
+.panel h3{font-size:1.4rem;margin-bottom:22px;}
+.edu{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow);}
+.edu .deg{font-family:"Fraunces",serif;font-size:1.2rem;font-weight:600;}
+.edu .uni{color:var(--green-700);font-weight:600;margin-top:4px;}
+.edu .yr{color:var(--muted);font-size:.92rem;margin-top:2px;}
+.chips{display:flex;flex-wrap:wrap;gap:11px;}
+.chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:9px 16px;font-size:.92rem;font-weight:500;color:var(--green-800);display:inline-flex;align-items:center;gap:8px;}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--amber);}
+.lang-row{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);}
+.lang-row:last-child{border-bottom:none;}
+.lang-name{font-weight:600;}
+.lang-lvl{font-size:.9rem;color:var(--muted);}
+/* CONTACT */
+.contact{background:var(--green-900);color:#F4EEE2;}
+.contact .sec-head h2{color:#FBF6EC;}
+.contact .sec-head p{color:rgba(244,238,226,.8);}
+.contact .eyebrow{color:var(--amber);}
+.contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start;}
+.contact-list{display:grid;gap:14px;}
+.contact-item{display:flex;align-items:center;gap:14px;text-decoration:none;color:#F4EEE2;background:rgba(244,238,226,.06);border:1px solid rgba(244,238,226,.14);border-radius:14px;padding:16px 18px;transition:background .18s,transform .15s;}
+.contact-item:hover{background:rgba(244,238,226,.12);transform:translateY(-2px);}
+.contact-item .ic{width:42px;height:42px;border-radius:10px;background:rgba(210,146,57,.18);display:flex;align-items:center;justify-content:center;color:var(--amber);flex:none;}
+.contact-item .lbl{font-size:.78rem;color:rgba(244,238,226,.62);}
+.contact-item .val{font-weight:600;font-size:1rem;}
+form{display:grid;gap:16px;background:rgba(244,238,226,.05);border:1px solid rgba(244,238,226,.14);border-radius:var(--radius);padding:26px;}
+.field label{display:block;font-size:.82rem;font-weight:600;letter-spacing:.04em;color:rgba(244,238,226,.78);margin-bottom:7px;}
+.field input,.field textarea{width:100%;background:rgba(252,250,244,.96);border:1.5px solid transparent;border-radius:12px;padding:13px 15px;font-family:inherit;font-size:1rem;color:var(--ink);transition:border .18s,box-shadow .18s;}
+.field textarea{min-height:120px;resize:vertical;}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 4px rgba(210,146,57,.22);}
+form .btn-primary{justify-content:center;width:100%;font-size:1rem;padding:14px;}
+.form-note{font-size:.84rem;color:rgba(244,238,226,.6);text-align:center;}
+/* FOOTER */
+footer{background:var(--green-800);color:rgba(244,238,226,.72);padding:28px 0 22px;font-size:.88rem;}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:18px;padding-bottom:18px;border-bottom:1px solid rgba(244,238,226,.14);}
+.foot-brand{font-family:"Fraunces",serif;font-weight:600;font-size:1.1rem;color:#F4EEE2;}
+.foot-brand span{color:var(--amber);}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
+.foot-links button{background:none;border:none;color:rgba(244,238,226,.65);font-family:"Figtree",sans-serif;font-size:.88rem;cursor:pointer;padding:0;text-decoration:underline;text-underline-offset:3px;transition:color .18s;}
+.foot-links button:hover{color:#F4EEE2;}
+.foot-bottom{margin-top:16px;font-size:.84rem;color:rgba(244,238,226,.5);}
+/* COOKIE BANNER */
+.cookie-banner{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:var(--green-900);color:#F4EEE2;
+  border-top:2px solid var(--amber);
+  padding:18px 24px;display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:14px;box-shadow:0 -8px 32px rgba(0,0,0,.2);
+}
+.cookie-banner p{font-size:.92rem;color:rgba(244,238,226,.88);max-width:620px;}
+.cookie-banner a{color:var(--amber);text-decoration:underline;cursor:pointer;}
+.cookie-actions{display:flex;gap:10px;flex:none;}
+.cookie-accept{background:var(--amber);color:#221603;border:none;border-radius:999px;padding:9px 20px;font-family:"Figtree",sans-serif;font-size:.92rem;font-weight:700;cursor:pointer;transition:transform .15s;}
+.cookie-accept:hover{transform:translateY(-2px);}
+.cookie-more{background:transparent;border:1.5px solid rgba(244,238,226,.35);border-radius:999px;padding:9px 16px;font-family:"Figtree",sans-serif;font-size:.92rem;font-weight:600;color:#F4EEE2;cursor:pointer;transition:border-color .18s;}
+.cookie-more:hover{border-color:rgba(244,238,226,.7);}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:300;background:rgba(20,58,46,.7);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:20px;}
+.modal-box{background:var(--surface);border-radius:var(--radius);max-width:680px;width:100%;max-height:85vh;display:flex;flex-direction:column;box-shadow:0 24px 64px rgba(0,0,0,.3);}
+.modal-head{display:flex;align-items:center;justify-content:space-between;padding:22px 28px;border-bottom:1px solid var(--line);flex:none;}
+.modal-head h2{font-size:1.25rem;}
+.modal-close{background:var(--green-50);border:1px solid var(--line-green);border-radius:50%;width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--green-800);transition:background .15s;}
+.modal-close:hover{background:var(--green-100);}
+.modal-tabs{display:flex;gap:6px;padding:16px 28px 0;border-bottom:1px solid var(--line);flex:none;}
+.modal-tab{background:none;border:none;border-bottom:2.5px solid transparent;padding:8px 14px;font-family:"Figtree",sans-serif;font-size:.95rem;font-weight:600;color:var(--muted);cursor:pointer;transition:color .15s,border-color .15s;margin-bottom:-1px;}
+.modal-tab.active{color:var(--green-800);border-bottom-color:var(--amber);}
+.modal-body{flex:1;overflow-y:auto;padding:28px;}
+.modal-body h3{font-size:1.1rem;margin:22px 0 10px;color:var(--green-800);}
+.modal-body h3:first-child{margin-top:0;}
+.modal-body p,.modal-body li{font-size:.95rem;color:var(--muted);line-height:1.7;margin-bottom:8px;}
+.modal-body ul{padding-left:20px;margin:8px 0;}
+.modal-body .highlight{background:var(--amber-soft);border-left:3px solid var(--amber);border-radius:0 8px 8px 0;padding:12px 16px;margin:14px 0;font-size:.92rem;color:var(--green-800);}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+/* RESPONSIVE */
+@media(max-width:900px){
+  .about-grid,.two-col,.contact-grid,.booking-grid,.payment-grid{grid-template-columns:1fr;gap:34px;}
+  .service-grid{grid-template-columns:1fr 1fr;}
+  .cards{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  body{font-size:16px;}
+  .nav-links{display:none;}
+  section{padding:64px 0;}
+  .hero-inner{padding:60px 22px 68px;}
+  .cards,.service-grid{grid-template-columns:1fr;}
+  .hero-cta .btn{flex:1;justify-content:center;}
+  .cookie-banner{flex-direction:column;align-items:flex-start;}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;}
+  .reveal{opacity:1!important;transform:none!important;transition:none!important;}
+}
+.brand-logo {
+  height: 36px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">Evergreen <span>Learning</span></a>
+    <nav class="nav-links" aria-label="Ana menü">
+      <a href="#hakkimda" data-i18n="nav.about">Hakkımda</a>
+      <a href="#deneyim" data-i18n="nav.experience">Deneyim</a>
+      <a href="#hizmetler" data-i18n="nav.services">Hizmetler</a>
+      <a href="#forms" data-i18n="nav.forms">Formlar</a>
+      <a href="#randevu" data-i18n="nav.booking">Randevu</a>
+      <a href="#odeme" data-i18n="nav.payment">Ödeme</a>
+      <a href="#iletisim" data-i18n="nav.contact">İletişim</a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-wrap">
+        <button class="lang-btn" id="langBtn" onclick="toggleLangMenu()" aria-label="Dil seç">
+          <span id="langFlag">🇹🇷</span>
+          <span id="langLabel">TR</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu" role="listbox">
+          <button onclick="setLang('tr')" class="active" id="optTR">🇹🇷 &nbsp;Türkçe</button>
+          <button onclick="setLang('en')" id="optEN">🇬🇧 &nbsp;English</button>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="#randevu"><span data-i18n="nav.cta">Randevu Al</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding:0;">
+  <div class="hero-inner">
+    <p class="eyebrow reveal" data-i18n="hero.eyebrow">Özel Eğitim &amp; Okul Öncesi Öğretmeni</p>
+    <h1 class="reveal" data-i18n="hero.h1">Her çocuğun <em>başarılı, güvende ve değerli</em> hissetmesi için.</h1>
+    <p class="lede reveal" data-i18n="hero.lede">Okul öncesi ve özel eğitim alanında 15+ yıllık örnek deneyime sahip bir öğretmenim. Otizm, Down sendromu ve öğrenme güçlüğü olan öğrencilerle birebir çalışıyor; her öğrenciye özel, kanıta dayalı eğitim planları hazırlıyorum.</p>
+    <div class="hero-meta reveal">
+      <span><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-10a7 7 0 0 1 14 0c0 4.8-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> <span data-i18n="hero.location">Örnek Şehir — Türkiye</span></span>
+      <span><svg class="icon" viewBox="0 0 24 24"><path d="M3 7l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg> hello@evergreenlearningstudio.com</span>
+    </div>
+    <div class="hero-cta reveal">
+      <a class="btn btn-primary" href="#randevu"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span data-i18n="hero.cta.book">Randevu Al</span></a>
+      <a class="btn btn-ghost" href="docs/sample-special-education-teacher-resume.pdf" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg><span data-i18n="hero.cta.cv">Örnek CV İndir</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="hakkimda">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="about.eyebrow">Hakkımda</p>
+      <h2 data-i18n="about.h2">Bireysel gelişime adanmış bir öğretmenlik anlayışı</h2>
+    </div>
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="lead-text" data-i18n="about.lead">Anadolu Üniversitesi Okul Öncesi Öğretmenliği mezunuyum ve özel gereksinimli çocukların eğitimi ile gelişimsel destek programları konusunda <strong>15+ yıllık örnek uygulama deneyimine</strong> sahibim.</p>
+        <p style="margin-top:18px;color:var(--muted);" data-i18n="about.p2">Bireyselleştirilmiş Eğitim Planı (BEP) hazırlama ve uygulama, davranış düzenleme, öğrenci gelişimini izleme ve aile iş birliği konularında yetkinim. Eğitim sürecini yalnızca sınıf içinde değil; ailelerle ve uzman ekiplerle kurduğum güçlü iş birliğiyle bütünsel olarak ele alıyorum.</p>
+      </div>
+      <aside class="stat-card reveal">
+        <div class="stat-row"><span class="stat-num">20+</span><span class="stat-lbl" data-i18n="stat1.lbl">yıl özel eğitim ve okul öncesi deneyimi</span></div>
+        <div class="stat-row"><span class="stat-num">BEP</span><span class="stat-lbl" data-i18n="stat2.lbl">bireysel eğitim planı hazırlama ve uygulama</span></div>
+        <div class="stat-row"><span class="stat-num">1:1</span><span class="stat-lbl" data-i18n="stat3.lbl">birebir, öğrenciye özel eğitim çalışmaları</span></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="deneyim">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="exp.eyebrow">Deneyim</p>
+      <h2 data-i18n="exp.h2">Mesleki yolculuk</h2>
+      <p data-i18n="exp.p">Sınıfta, rehabilitasyon merkezinde ve halk eğitiminde edinilmiş kapsamlı saha deneyimi.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <p class="tl-period" data-i18n="tl1.period">2012 — 2026</p>
+        <h3 class="tl-role" data-i18n="tl1.role">Special Education Consultant / Sample Teacher</h3>
+        <p class="tl-org" data-i18n="tl1.org">Premium Special Education & Rehabilitation Centre <span class="place">· Örnek Şehir — Türkiye</span></p>
+        <ul class="tl-list">
+          <li data-i18n="tl1.li1">Öğrencilerin bireysel ihtiyaçlarına uygun Bireyselleştirilmiş Eğitim Planları (BEP) hazırladı ve uyguladı.</li>
+          <li data-i18n="tl1.li2">Otizm, Down sendromu ve öğrenme güçlüğü olan öğrencilerle birebir eğitim çalışmaları yürüttü.</li>
+          <li data-i18n="tl1.li3">Oyun temelli ve yapılandırılmış öğretim yöntemleriyle öğrenme sürecini destekledi.</li>
+          <li data-i18n="tl1.li4">Dil ve konuşma egzersizleri yoluyla öğrencilerin iletişim becerilerini geliştirdi.</li>
+          <li data-i18n="tl1.li5">Öğrenci gelişimini düzenli olarak izledi, raporladı; aileler ve uzman ekiple iş birliği yaptı.</li>
+        </ul>
+      </div>
+      <div class="tl-item reveal">
+        <p class="tl-period" data-i18n="tl2.period">Eğitmenlik</p>
+        <h3 class="tl-role" data-i18n="tl2.role">Usta Öğretici / Eğitmen</h3>
+        <p class="tl-org" data-i18n="tl2.org">Toplum Eğitim Merkezi <span class="place">· Örnek Şehir — Türkiye</span></p>
+        <ul class="tl-list">
+          <li data-i18n="tl2.li1">Farklı yaş ve gelişim düzeylerindeki bireylere yönelik eğitim programları hazırladı ve uyguladı.</li>
+          <li data-i18n="tl2.li2">Davranış yönetimi ve öfke kontrolü tekniklerini günlük öğretim sürecine entegre etti.</li>
+          <li data-i18n="tl2.li3">Öğrencilerin bireysel öğrenme hedeflerine ulaşmasını destekleyen materyaller geliştirdi.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise" id="uzmanlik">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="exp2.eyebrow">Uzmanlık Alanları</p>
+      <h2 data-i18n="exp2.h2">Ne üzerine çalışıyorum</h2>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="card-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><h3 data-i18n="c1.h3">Individual Education Plan (BEP)</h3><p data-i18n="c1.p">Her öğrencinin gereksinimlerine göre planların hazırlanması, uygulanması ve değerlendirilmesi.</p></div>
+      <div class="card reveal"><div class="card-ico"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div><h3 data-i18n="c2.h3">Özel Eğitim</h3><p data-i18n="c2.p">Otizm spektrum bozukluğu, Down sendromu ve öğrenme güçlüğü olan öğrencilerle birebir çalışma.</p></div>
+      <div class="card reveal"><div class="card-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3 data-i18n="c3.h3">Dil &amp; Konuşma Gelişimi</h3><p data-i18n="c3.p">Dil ve konuşma egzersizleriyle öğrencilerin iletişim becerilerinin desteklenmesi.</p></div>
+      <div class="card reveal"><div class="card-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-10a7 7 0 0 1 14 0c0 4.8-7 10-7 10z"/><circle cx="12" cy="11" r="2.3"/></svg></div><h3 data-i18n="c4.h3">Davranış Yönetimi</h3><p data-i18n="c4.p">Öfke kontrolü ve sınıf yönetimi tekniklerinin günlük öğretim sürecine entegre edilmesi.</p></div>
+      <div class="card reveal"><div class="card-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></div><h3 data-i18n="c5.h3">Gelişim İzleme</h3><p data-i18n="c5.p">Öğrenci gelişiminin düzenli takibi, raporlanması ve hedeflere göre yeniden planlanması.</p></div>
+      <div class="card reveal"><div class="card-ico"><svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3 data-i18n="c6.h3">Aile &amp; Ekip İş Birliği</h3><p data-i18n="c6.p">Ailelerle ve uzman ekiplerle güçlü iş birliği yoluyla bütünsel eğitim yaklaşımı.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="hizmetler">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="svc.eyebrow">Hizmetler</p>
+      <h2 data-i18n="svc.h2">Sunduğum seanslar</h2>
+      <p data-i18n="svc.p">Her seans, öğrencinin bireysel ihtiyaç ve gelişim düzeyine göre planlanır.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card reveal">
+        <span class="service-badge" data-i18n="s1.badge">Bireysel</span>
+        <h3 data-i18n="s1.h3">Bireysel Özel Eğitim Seansı</h3>
+        <p class="desc" data-i18n="s1.desc">Otizm, Down sendromu veya öğrenme güçlüğü olan öğrenciler için birebir, BEP'e dayalı destek seansı.</p>
+        <ul class="service-includes"><li data-i18n="s1.li1">Bireyselleştirilmiş plan uygulaması</li><li data-i18n="s1.li2">Dil &amp; konuşma egzersizleri</li><li data-i18n="s1.li3">Davranış desteği</li><li data-i18n="s1.li4">Seans sonrası kısa ilerleme notu</li></ul>
+        <div class="service-meta"><span class="service-duration"><svg class="icon" style="width:15px;height:15px;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-i18n="s1.duration">45 dakika</span></span><span class="service-price">₺— <span data-i18n="per.session">/ seans</span></span></div>
+      </div>
+      <div class="service-card featured reveal">
+        <span class="service-badge" data-i18n="s2.badge">En Çok Tercih</span>
+        <h3 data-i18n="s2.h3">Aylık Destek Paketi</h3>
+        <p class="desc" data-i18n="s2.desc">Haftada 2 seans ile düzenli ve planlı eğitim süreci. Gelişim takibi ve aile görüşmeleri dahil.</p>
+        <ul class="service-includes"><li data-i18n="s2.li1">Ayda 8 bireysel seans</li><li data-i18n="s2.li2">Aylık gelişim raporu</li><li data-i18n="s2.li3">Aile ile düzenli geri bildirim</li><li data-i18n="s2.li4">Öncelikli randevu hakkı</li></ul>
+        <div class="service-meta"><span class="service-duration"><svg class="icon" style="width:15px;height:15px;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-i18n="s2.duration">8 × 45 dk</span></span><span class="service-price">₺— <span data-i18n="per.month">/ ay</span></span></div>
+      </div>
+      <div class="service-card reveal">
+        <span class="service-badge" data-i18n="s3.badge">Danışmanlık</span>
+        <h3 data-i18n="s3.h3">Aile Danışmanlık Seansı</h3>
+        <p class="desc" data-i18n="s3.desc">Ebeveynlere yönelik; evde uygulanabilecek teknikler, öğrencinin gelişim süreci ve stratejiler üzerine görüşme.</p>
+        <ul class="service-includes"><li data-i18n="s3.li1">Birebir aile görüşmesi</li><li data-i18n="s3.li2">Ev ortamına uygun öneriler</li><li data-i18n="s3.li3">Sorularınıza yanıt</li></ul>
+        <div class="service-meta"><span class="service-duration"><svg class="icon" style="width:15px;height:15px;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-i18n="s3.duration">30 dakika</span></span><span class="service-price">₺— <span data-i18n="per.session">/ seans</span></span></div>
+      </div>
+    </div>
+    <p style="margin-top:28px;text-align:center;color:var(--muted);font-size:.92rem;" data-i18n="svc.note">💡 Ücretler için lütfen doğrudan iletişime geçin veya aşağıdan randevu oluşturun.</p>
+  </div>
+</section>
+
+
+<!-- FORMS / DOWNLOADS -->
+<section class="forms" id="forms">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Templates & Downloads</p>
+      <h2>Fillable forms and sample resume</h2>
+      <p>This premium fictional special education brand includes client-ready forms that can be filled in the browser, printed, or saved as PDF. The resume is a sample template for special education teachers.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card featured">
+        <span class="service-badge">Form</span>
+        <h3>Parental Consent / KVKK Form</h3>
+        <p class="desc">Bilingual fillable consent form for special education support services.</p>
+        <div class="service-meta"><a class="btn btn-green" href="forms/parental-consent-form.html" target="_blank" rel="noopener">Open Form</a></div>
+      </article>
+      <article class="service-card">
+        <span class="service-badge">Form</span>
+        <h3>Client Intake Form</h3>
+        <p class="desc">Structured intake form for parent, child, education, support needs, and contact details.</p>
+        <div class="service-meta"><a class="btn btn-green" href="forms/client-intake-form.html" target="_blank" rel="noopener">Open Form</a></div>
+      </article>
+      <article class="service-card">
+        <span class="service-badge">Agreement</span>
+        <h3>Service Agreement</h3>
+        <p class="desc">Fillable service agreement template for special education sessions.</p>
+        <div class="service-meta"><a class="btn btn-green" href="forms/service-agreement.html" target="_blank" rel="noopener">Open Agreement</a></div>
+      </article>
+      <article class="service-card">
+        <span class="service-badge">Resume</span>
+        <h3>Special Education Teacher Resume</h3>
+        <p class="desc">Fictional sample resume in DOCX and PDF format.</p>
+        <div class="service-meta"><a class="btn btn-outline" href="docs/sample-special-education-teacher-resume.pdf" target="_blank" rel="noopener">PDF</a><a class="btn btn-green" href="docs/sample-special-education-teacher-resume.docx">DOCX</a></div>
+      </article>
+      <article class="service-card">
+        <span class="service-badge">Brand</span>
+        <h3>Brand Guidelines</h3>
+        <p class="desc">Anonymous fictional brand guidelines for this premium sample identity.</p>
+        <div class="service-meta"><a class="btn btn-green" href="brand-guidelines/brand-guidelines.html" target="_blank" rel="noopener">Open Guidelines</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="randevu" style="padding:84px 0;">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="bk.eyebrow">Randevu Sistemi</p>
+      <h2 data-i18n="bk.h2">Müsait olduğum saati seçin</h2>
+      <p data-i18n="bk.p">Tam zamanlı çalışıyorum; takvimde yalnızca uygun olduğum saatler görünür. Kendinize en uygun zamanı seçin.</p>
+    </div>
+    <div class="booking-grid">
+      <div class="booking-info reveal">
+        <div class="booking-rule"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span><div><strong data-i18n="bk.r1.title">Uygun saatler</strong><p data-i18n="bk.r1.p">Takvimde yalnızca gerçek müsaitlik saatlerim görünür. Dolu slotlar zaten kapalıdır.</p></div></div>
+        <div class="booking-rule"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><div><strong data-i18n="bk.r2.title">Onay e-postası</strong><p data-i18n="bk.r2.p">Randevuyu tamamladıktan sonra size otomatik e-posta onayı gönderilir.</p></div></div>
+        <div class="booking-rule"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><div><strong data-i18n="bk.r3.title">Ödeme</strong><p data-i18n="bk.r3.p">Randevu sonrası IBAN ile ödeme yapın, makbuzu e-posta veya WhatsApp ile gönderin.</p></div></div>
+        <div class="booking-rule"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg></span><div><strong data-i18n="bk.r4.title">İptal politikası</strong><p data-i18n="bk.r4.p">Seânstan en az 24 saat önce iptal veya erteleme bildirimi yapılması rica olunur.</p></div></div>
+      </div>
+      <div class="cal-embed-wrap reveal">
+        <!-- CALENDLY KURULUM:
+             1) calendly.com — ücretsiz hesap açın
+             2) Event type oluşturun, müsait saatlerinizi ayarlayın
+             3) Linkinizi kopyalayın (ör: https://calendly.com/evergreen-learning/seans)
+             4) Aşağıdaki bloğu uncomment edin, PLACEHOLDER_URL'yi değiştirin
+             5) Cal placeholder div'ini silin
+        <div class="calendly-inline-widget"
+          data-url="PLACEHOLDER_URL?hide_gdpr_banner=1&primary_color=d29239"
+          style="min-width:320px;height:580px;"></div>
+        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        -->
+        <div class="cal-placeholder">
+          <div class="setup-badge" data-i18n="cal.badge">⚙️ Kurulum Gerekiyor</div>
+          <h3 data-i18n="cal.h3">Takvim Buraya Gelecek</h3>
+          <p data-i18n="cal.p">Calendly hesabı kurulduktan sonra interaktif takvim burada görünecek.</p>
+          <div class="setup-steps">
+            <div class="setup-step"><div class="num">1</div><div class="txt"><strong data-i18n="cal.s1.title">calendly.com — ücretsiz kayıt</strong><span data-i18n="cal.s1.p">Hesap açın, seans türü oluşturun.</span></div></div>
+            <div class="setup-step"><div class="num">2</div><div class="txt"><strong data-i18n="cal.s2.title">Müsait saatleri girin</strong><span data-i18n="cal.s2.p">Yalnızca uygun olduğunuz saatler seçilir.</span></div></div>
+            <div class="setup-step"><div class="num">3</div><div class="txt"><strong data-i18n="cal.s3.title">HTML'de tek satır değiştir</strong><span data-i18n="cal.s3.p">Link yapıştırılır, takvim anında yayına girer.</span></div></div>
+          </div>
+          <a class="btn btn-green" style="margin-top:28px;" href="#iletisim"><span data-i18n="cal.cta">Şimdilik Doğrudan Ulaşın</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section class="payment" id="odeme">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="pay.eyebrow">Ödeme Bilgileri</p>
+      <h2 data-i18n="pay.h2">Güvenli ve kolay havale</h2>
+      <p data-i18n="pay.p">Tüm ödemeler seans öncesi IBAN havale / EFT ile yapılır. İşlem ücreti yoktur.</p>
+    </div>
+    <div class="payment-grid">
+      <div class="reveal">
+        <h3 style="margin-bottom:28px;" data-i18n="wf.title">Nasıl işliyor?</h3>
+        <div class="workflow">
+          <div class="wf-step"><div class="wf-num">1</div><div class="wf-body"><strong data-i18n="wf1.title">Randevu alın</strong><p data-i18n="wf1.p">Yukarıdaki takvimden size uygun saati seçin ve formu doldurun.</p></div></div>
+          <div class="wf-step"><div class="wf-num">2</div><div class="wf-body"><strong data-i18n="wf2.title">Havale yapın</strong><p data-i18n="wf2.p">Seans ücretini aşağıdaki IBAN'a — seanstan en az 3 saat önce — havale edin.</p></div></div>
+          <div class="wf-step"><div class="wf-num">3</div><div class="wf-body"><strong data-i18n="wf3.title">Makbuzu gönderin</strong><p data-i18n="wf3.p">Dekont ekran görüntüsünü e-posta veya WhatsApp ile paylaşın.</p></div></div>
+          <div class="wf-step"><div class="wf-num">4</div><div class="wf-body" style="padding-bottom:0;"><strong data-i18n="wf4.title">Seans başlasın</strong><p data-i18n="wf4.p">Ödeme onaylandıktan sonra randevunuz kesinleşmiş olur.</p></div></div>
+        </div>
+      </div>
+      <div class="iban-card reveal">
+        <div class="iban-header"><div class="iban-logo"><svg class="icon" style="width:24px;height:24px;" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div><div><h3 data-i18n="iban.title">Banka Havalesi</h3><p data-i18n="iban.sub">EFT / IBAN — komisyonsuz</p></div></div>
+        <div class="iban-row"><span class="iban-lbl" data-i18n="iban.holder.lbl">Hesap Sahibi</span><span class="iban-val">Evergreen Learning Studio</span></div>
+        <div class="iban-row"><span class="iban-lbl" data-i18n="iban.bank.lbl">Banka</span><span class="iban-val" data-i18n="iban.bank.val">— Banka adını buraya yazın —</span></div>
+        <div class="iban-row"><span class="iban-lbl">IBAN</span><span class="iban-val mono" id="ibanVal">TR00 0000 0000 0000 0000 0000 00</span><button class="copy-btn" id="copyBtn" onclick="copyIBAN()"><svg style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.7;" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span data-i18n="iban.copy">Kopyala</span></button></div>
+        <div class="iban-row"><span class="iban-lbl" data-i18n="iban.desc.lbl">Açıklama (zorunlu)</span><span class="iban-val" data-i18n="iban.desc.val">Ad Soyad + Seans Tarihi</span></div>
+        <div class="payment-note"><svg class="icon" style="width:18px;height:18px;flex:none;margin-top:1px;" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4m0 4h.01"/></svg><span data-i18n="iban.note">Banka adı ve IBAN'ı güncellemek için HTML dosyasında ilgili 2 satırı düzenleyin.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="edu-sec" id="egitim">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="edu.eyebrow">Eğitim &amp; Yetkinlikler</p>
+      <h2 data-i18n="edu.h2">Akademik temel ve sertifikalar</h2>
+    </div>
+    <div class="two-col">
+      <div class="panel reveal">
+        <h3 data-i18n="edu.title">Eğitim</h3>
+        <div class="edu"><p class="deg" data-i18n="edu.deg">Lisans — Okul Öncesi Öğretmenliği</p><p class="uni" data-i18n="edu.uni">Anadolu Üniversitesi</p><p class="yr">2007</p></div>
+        <h3 style="margin-top:40px;" data-i18n="langs.title">Diller</h3>
+        <div class="edu">
+          <div class="lang-row"><span class="lang-name" data-i18n="lang1.name">Türkçe</span><span class="lang-lvl" data-i18n="lang1.lvl">Ana dil</span></div>
+          <div class="lang-row"><span class="lang-name" data-i18n="lang2.name">İngilizce</span><span class="lang-lvl" data-i18n="lang2.lvl">Orta düzey</span></div>
+        </div>
+      </div>
+      <div class="panel reveal">
+        <h3 data-i18n="certs.title">Sertifikalar &amp; Mesleki Gelişim</h3>
+        <div class="chips">
+          <span class="chip" data-i18n="cert1">Özel Eğitimde Uzman Öğretici Eğitimi</span>
+          <span class="chip" data-i18n="cert2">Pedagojik Formasyon</span>
+          <span class="chip" data-i18n="cert3">Oyun Terapisi Sertifikası</span>
+          <span class="chip" data-i18n="cert4">Öfke Kontrolü Eğitimi</span>
+          <span class="chip" data-i18n="cert5">Dil &amp; Konuşma Egzersizleri Eğitimi</span>
+          <span class="chip" data-i18n="cert6">İş Sağlığı ve Güvenliği</span>
+        </div>
+        <h3 style="margin-top:40px;" data-i18n="skills.title">Temel Yetkinlikler</h3>
+        <div class="chips">
+          <span class="chip" data-i18n="sk1">Özel Eğitim</span>
+          <span class="chip" data-i18n="sk2">Pedagoji</span>
+          <span class="chip" data-i18n="sk3">Öğrenme Güçlüğü</span>
+          <span class="chip" data-i18n="sk4">Dil &amp; Konuşma</span>
+          <span class="chip" data-i18n="sk5">Sınıf Yönetimi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="iletisim">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow" data-i18n="ct.eyebrow">İletişim</p>
+      <h2 data-i18n="ct.h2">Birlikte çalışalım</h2>
+      <p data-i18n="ct.p">Seans hakkında sorularınız veya özel durumlar için doğrudan ulaşabilirsiniz.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-list reveal">
+        <a class="contact-item" href="mailto:hello@evergreenlearningstudio.com"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M3 7l9 6 9-6"/><rect x="3" y="5" width="18" height="14" rx="2"/></svg></span><span><span class="lbl" data-i18n="ct.email.lbl">E-posta</span><br><span class="val">hello@evergreenlearningstudio.com</span></span></a>
+        <div class="contact-item" style="cursor:default;"><span class="ic"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-10a7 7 0 0 1 14 0c0 4.8-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg></span><span><span class="lbl" data-i18n="ct.loc.lbl">Konum</span><br><span class="val" data-i18n="ct.loc.val">Örnek Şehir — Türkiye</span></span></div>
+      </div>
+      <form id="contactForm" novalidate>
+        <div class="field"><label for="fname" data-i18n="form.name.lbl">Adınız Soyadınız</label><input id="fname" name="name" type="text" autocomplete="name" required data-i18n-ph="form.name.ph" placeholder="Adınızı yazın"/></div>
+        <div class="field"><label for="femail" data-i18n="form.email.lbl">E-posta</label><input id="femail" name="email" type="email" required data-i18n-ph="form.email.ph" placeholder="E-posta adresiniz"/></div>
+        <div class="field"><label for="fmsg" data-i18n="form.msg.lbl">Mesajınız</label><textarea id="fmsg" name="message" required data-i18n-ph="form.msg.ph" placeholder="Kısaca mesajınızı yazın..."></textarea></div>
+        <button class="btn btn-primary" type="submit"><span data-i18n="form.submit">Mesaj Gönder</span></button>
+        <p class="form-note" data-i18n="form.note">Gönder'e tıkladığınızda mesajınız e-posta uygulamanızda hazır olarak açılır.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <span class="foot-brand">Evergreen <span>Learning</span></span>
+      <div class="foot-links">
+        <button onclick="openModal('privacy')" data-i18n="foot.privacy">Gizlilik / KVKK</button>
+        <button onclick="openModal('cookies')" data-i18n="foot.cookies">Çerez Politikası</button>
+      </div>
+    </div>
+    <p class="foot-bottom">© <span id="year"></span> Evergreen Learning Studio · <span data-i18n="foot.role">Özel Eğitim &amp; Okul Öncesi Öğretmeni</span></p>
+  </div>
+</footer>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p data-i18n="ck.text">Bu site teknik çerezler ve Google Fonts (harici sunucu) kullanmaktadır. Devam ederek <a onclick="openModal('cookies')" data-i18n="ck.link">çerez politikamızı</a> kabul etmiş olursunuz.</p>
+  <div class="cookie-actions">
+    <button class="cookie-more" onclick="openModal('privacy')" data-i18n="ck.more">Daha Fazla Bilgi</button>
+    <button class="cookie-accept" onclick="acceptCookies()" data-i18n="ck.accept">Kabul Et</button>
+  </div>
+</div>
+
+<!-- PRIVACY / COOKIE MODAL -->
+<div class="modal-overlay" id="privacyModal" style="display:none;" onclick="closeModalOutside(event)">
+  <div class="modal-box" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <h2 id="modalTitle">Gizlilik &amp; KVKK</h2>
+      <button class="modal-close" onclick="closeModal()" aria-label="Kapat">✕</button>
+    </div>
+    <div class="modal-tabs">
+      <button class="modal-tab active" id="tabPrivacy" onclick="switchTab('privacy')" data-i18n="tab.privacy">KVKK / Gizlilik</button>
+      <button class="modal-tab" id="tabCookies" onclick="switchTab('cookies')" data-i18n="tab.cookies">Çerez Politikası</button>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <!-- content rendered by JS -->
+    </div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// TRANSLATIONS
+// ============================================================
+const T = {
+  tr: {
+    "nav.about":"Hakkımda","nav.experience":"Deneyim","nav.services":"Hizmetler",
+    "nav.forms":"Formlar","nav.booking":"Randevu","nav.payment":"Ödeme","nav.contact":"İletişim","nav.cta":"Randevu Al",
+    "hero.eyebrow":"Özel Eğitim &amp; Okul Öncesi Öğretmeni",
+    "hero.h1":"Her çocuğun <em>başarılı, güvende ve değerli</em> hissetmesi için.",
+    "hero.lede":"Okul öncesi ve özel eğitim alanında 15+ yıllık örnek deneyime sahip bir öğretmenim. Otizm, Down sendromu ve öğrenme güçlüğü olan öğrencilerle birebir çalışıyor; her öğrenciye özel, kanıta dayalı eğitim planları hazırlıyorum.",
+    "hero.location":"Örnek Şehir — Türkiye","hero.cta.book":"Randevu Al","hero.cta.cv":"Örnek CV İndir",
+    "about.eyebrow":"Hakkımda","about.h2":"Bireysel gelişime adanmış bir öğretmenlik anlayışı",
+    "about.lead":"Anadolu Üniversitesi Okul Öncesi Öğretmenliği mezunuyum ve özel gereksinimli çocukların eğitimi ile gelişimsel destek programları konusunda <strong>15+ yıllık örnek uygulama deneyimine</strong> sahibim.",
+    "about.p2":"Bireyselleştirilmiş Eğitim Planı (BEP) hazırlama ve uygulama, davranış düzenleme, öğrenci gelişimini izleme ve aile iş birliği konularında yetkinim. Eğitim sürecini yalnızca sınıf içinde değil; ailelerle ve uzman ekiplerle kurduğum güçlü iş birliğiyle bütünsel olarak ele alıyorum.",
+    "stat1.lbl":"yıl özel eğitim ve okul öncesi deneyimi",
+    "stat2.lbl":"bireysel eğitim planı hazırlama ve uygulama",
+    "stat3.lbl":"birebir, öğrenciye özel eğitim çalışmaları",
+    "exp.eyebrow":"Deneyim","exp.h2":"Mesleki yolculuk",
+    "exp.p":"Sınıfta, rehabilitasyon merkezinde ve halk eğitiminde edinilmiş kapsamlı saha deneyimi.",
+    "tl1.period":"2012 — 2026","tl1.role":"Special Education Consultant / Sample Teacher",
+    "tl1.org":"Premium Special Education & Rehabilitation Centre <span class=\"place\">· Örnek Şehir — Türkiye</span>",
+    "tl1.li1":"Öğrencilerin bireysel ihtiyaçlarına uygun Bireyselleştirilmiş Eğitim Planları (BEP) hazırladı ve uyguladı.",
+    "tl1.li2":"Otizm, Down sendromu ve öğrenme güçlüğü olan öğrencilerle birebir eğitim çalışmaları yürüttü.",
+    "tl1.li3":"Oyun temelli ve yapılandırılmış öğretim yöntemleriyle öğrenme sürecini destekledi.",
+    "tl1.li4":"Dil ve konuşma egzersizleri yoluyla öğrencilerin iletişim becerilerini geliştirdi.",
+    "tl1.li5":"Öğrenci gelişimini düzenli olarak izledi, raporladı; aileler ve uzman ekiple iş birliği yaptı.",
+    "tl2.period":"Eğitmenlik","tl2.role":"Usta Öğretici / Eğitmen",
+    "tl2.org":"Toplum Eğitim Merkezi <span class=\"place\">· Örnek Şehir — Türkiye</span>",
+    "tl2.li1":"Farklı yaş ve gelişim düzeylerindeki bireylere yönelik eğitim programları hazırladı ve uyguladı.",
+    "tl2.li2":"Davranış yönetimi ve öfke kontrolü tekniklerini günlük öğretim sürecine entegre etti.",
+    "tl2.li3":"Öğrencilerin bireysel öğrenme hedeflerine ulaşmasını destekleyen materyaller geliştirdi.",
+    "exp2.eyebrow":"Uzmanlık Alanları","exp2.h2":"Ne üzerine çalışıyorum",
+    "c1.h3":"Individual Education Plan (BEP)","c1.p":"Her öğrencinin gereksinimlerine göre planların hazırlanması, uygulanması ve değerlendirilmesi.",
+    "c2.h3":"Özel Eğitim","c2.p":"Otizm spektrum bozukluğu, Down sendromu ve öğrenme güçlüğü olan öğrencilerle birebir çalışma.",
+    "c3.h3":"Dil &amp; Konuşma Gelişimi","c3.p":"Dil ve konuşma egzersizleriyle öğrencilerin iletişim becerilerinin desteklenmesi.",
+    "c4.h3":"Davranış Yönetimi","c4.p":"Öfke kontrolü ve sınıf yönetimi tekniklerinin günlük öğretim sürecine entegre edilmesi.",
+    "c5.h3":"Gelişim İzleme","c5.p":"Öğrenci gelişiminin düzenli takibi, raporlanması ve hedeflere göre yeniden planlanması.",
+    "c6.h3":"Aile &amp; Ekip İş Birliği","c6.p":"Ailelerle ve uzman ekiplerle güçlü iş birliği yoluyla bütünsel eğitim yaklaşımı.",
+    "svc.eyebrow":"Hizmetler","svc.h2":"Sunduğum seanslar",
+    "svc.p":"Her seans, öğrencinin bireysel ihtiyaç ve gelişim düzeyine göre planlanır.",
+    "s1.badge":"Bireysel","s1.h3":"Bireysel Özel Eğitim Seansı",
+    "s1.desc":"Otizm, Down sendromu veya öğrenme güçlüğü olan öğrenciler için birebir, BEP'e dayalı destek seansı.",
+    "s1.li1":"Bireyselleştirilmiş plan uygulaması","s1.li2":"Dil &amp; konuşma egzersizleri",
+    "s1.li3":"Davranış desteği","s1.li4":"Seans sonrası kısa ilerleme notu","s1.duration":"45 dakika",
+    "s2.badge":"En Çok Tercih","s2.h3":"Aylık Destek Paketi",
+    "s2.desc":"Haftada 2 seans ile düzenli ve planlı eğitim süreci. Gelişim takibi ve aile görüşmeleri dahil.",
+    "s2.li1":"Ayda 8 bireysel seans","s2.li2":"Aylık gelişim raporu",
+    "s2.li3":"Aile ile düzenli geri bildirim","s2.li4":"Öncelikli randevu hakkı","s2.duration":"8 × 45 dk",
+    "s3.badge":"Danışmanlık","s3.h3":"Aile Danışmanlık Seansı",
+    "s3.desc":"Ebeveynlere yönelik; evde uygulanabilecek teknikler ve stratejiler üzerine görüşme.",
+    "s3.li1":"Birebir aile görüşmesi","s3.li2":"Ev ortamına uygun öneriler","s3.li3":"Sorularınıza yanıt","s3.duration":"30 dakika",
+    "per.session":"/ seans","per.month":"/ ay",
+    "svc.note":"💡 Ücretler için lütfen doğrudan iletişime geçin veya aşağıdan randevu oluşturun.",
+    "bk.eyebrow":"Randevu Sistemi","bk.h2":"Müsait olduğum saati seçin",
+    "bk.p":"Tam zamanlı çalışıyorum; takvimde yalnızca uygun olduğum saatler görünür.",
+    "bk.r1.title":"Uygun saatler","bk.r1.p":"Takvimde yalnızca gerçek müsaitlik saatlerim görünür.",
+    "bk.r2.title":"Onay e-postası","bk.r2.p":"Randevuyu tamamladıktan sonra size otomatik e-posta onayı gönderilir.",
+    "bk.r3.title":"Ödeme","bk.r3.p":"Randevu sonrası IBAN ile ödeme yapın, makbuzu e-posta veya WhatsApp ile gönderin.",
+    "bk.r4.title":"İptal politikası","bk.r4.p":"Seanstan en az 24 saat önce iptal bildirimi yapılması rica olunur.",
+    "cal.badge":"⚙️ Kurulum Gerekiyor","cal.h3":"Takvim Buraya Gelecek",
+    "cal.p":"Calendly hesabı kurulduktan sonra interaktif takvim burada görünecek.",
+    "cal.s1.title":"calendly.com — ücretsiz kayıt","cal.s1.p":"Hesap açın, seans türü oluşturun.",
+    "cal.s2.title":"Müsait saatleri girin","cal.s2.p":"Yalnızca uygun olduğunuz saatler seçilir.",
+    "cal.s3.title":"HTML'de tek satır değiştir","cal.s3.p":"Link yapıştırılır, takvim anında yayına girer.",
+    "cal.cta":"Şimdilik Doğrudan Ulaşın",
+    "pay.eyebrow":"Ödeme Bilgileri","pay.h2":"Güvenli ve kolay havale",
+    "pay.p":"Tüm ödemeler seans öncesi IBAN havale / EFT ile yapılır. İşlem ücreti yoktur.",
+    "wf.title":"Nasıl işliyor?",
+    "wf1.title":"Randevu alın","wf1.p":"Yukarıdaki takvimden size uygun saati seçin ve formu doldurun.",
+    "wf2.title":"Havale yapın","wf2.p":"Seans ücretini aşağıdaki IBAN'a — seanstan en az 3 saat önce — havale edin.",
+    "wf3.title":"Makbuzu gönderin","wf3.p":"Dekont ekran görüntüsünü e-posta veya WhatsApp ile paylaşın.",
+    "wf4.title":"Seans başlasın","wf4.p":"Ödeme onaylandıktan sonra randevunuz kesinleşmiş olur.",
+    "iban.title":"Banka Havalesi","iban.sub":"EFT / IBAN — komisyonsuz",
+    "iban.holder.lbl":"Hesap Sahibi","iban.bank.lbl":"Banka","iban.bank.val":"— Banka adını buraya yazın —",
+    "iban.desc.lbl":"Açıklama (zorunlu)","iban.desc.val":"Ad Soyad + Seans Tarihi",
+    "iban.copy":"Kopyala","iban.note":"Banka adı ve IBAN'ı güncellemek için HTML dosyasında ilgili 2 satırı düzenleyin.",
+    "edu.eyebrow":"Eğitim &amp; Yetkinlikler","edu.h2":"Akademik temel ve sertifikalar",
+    "edu.title":"Eğitim","edu.deg":"Lisans — Okul Öncesi Öğretmenliği","edu.uni":"Anadolu Üniversitesi",
+    "langs.title":"Diller","lang1.name":"Türkçe","lang1.lvl":"Ana dil","lang2.name":"İngilizce","lang2.lvl":"Orta düzey",
+    "certs.title":"Sertifikalar &amp; Mesleki Gelişim",
+    "cert1":"Özel Eğitimde Uzman Öğretici Eğitimi","cert2":"Pedagojik Formasyon",
+    "cert3":"Oyun Terapisi Sertifikası","cert4":"Öfke Kontrolü Eğitimi",
+    "cert5":"Dil &amp; Konuşma Egzersizleri Eğitimi","cert6":"İş Sağlığı ve Güvenliği",
+    "skills.title":"Temel Yetkinlikler","sk1":"Özel Eğitim","sk2":"Pedagoji",
+    "sk3":"Öğrenme Güçlüğü","sk4":"Dil &amp; Konuşma","sk5":"Sınıf Yönetimi",
+    "ct.eyebrow":"İletişim","ct.h2":"Birlikte çalışalım",
+    "ct.p":"Seans hakkında sorularınız veya özel durumlar için doğrudan ulaşabilirsiniz.",
+    "ct.email.lbl":"E-posta","ct.loc.lbl":"Konum","ct.loc.val":"Örnek Şehir — Türkiye",
+    "form.name.lbl":"Adınız Soyadınız","form.name.ph":"Adınızı yazın",
+    "form.email.lbl":"E-posta","form.email.ph":"E-posta adresiniz",
+    "form.msg.lbl":"Mesajınız","form.msg.ph":"Kısaca mesajınızı yazın...",
+    "form.submit":"Mesaj Gönder","form.note":"Gönder'e tıkladığınızda mesajınız e-posta uygulamanızda hazır olarak açılır.",
+    "foot.privacy":"Gizlilik / KVKK","foot.cookies":"Çerez Politikası","foot.role":"Özel Eğitim &amp; Okul Öncesi Öğretmeni",
+    "tab.privacy":"KVKK / Gizlilik","tab.cookies":"Çerez Politikası",
+    "ck.text":"Bu site teknik çerezler ve Google Fonts (harici sunucu) kullanmaktadır. Devam ederek <a onclick=\"openModal('cookies')\">çerez politikamızı</a> kabul etmiş olursunuz.",
+    "ck.link":"çerez politikamızı","ck.more":"Daha Fazla Bilgi","ck.accept":"Kabul Et"
+  },
+  en: {
+    "nav.about":"About","nav.experience":"Experience","nav.services":"Services",
+    "nav.forms":"Forms","nav.booking":"Booking","nav.payment":"Payment","nav.contact":"Contact","nav.cta":"Book Now",
+    "hero.eyebrow":"Special Education &amp; Preschool Teacher",
+    "hero.h1":"So every child feels <em>successful, safe, and valued.</em>",
+    "hero.lede":"I am a teacher with over 20 years of experience in preschool and special education. I work one-on-one with students with autism, Down syndrome, and learning difficulties, preparing individualised, evidence-based education plans.",
+    "hero.location":"Sample City — Turkey","hero.cta.book":"Book Appointment","hero.cta.cv":"Download Sample CV",
+    "about.eyebrow":"About Me","about.h2":"A teaching approach dedicated to individual development",
+    "about.lead":"I graduated from Anadolu University with a degree in Pre-School Teaching and have <strong>over 20 years of practical experience</strong> in educating children with special needs and developmental support programmes.",
+    "about.p2":"I am skilled in preparing and implementing Individualised Education Plans (IEP), behaviour regulation, monitoring student development, and family collaboration. I approach the education process holistically — not only within the classroom but through strong collaboration with families and specialist teams.",
+    "stat1.lbl":"years of special education and preschool experience",
+    "stat2.lbl":"individualised education plan preparation and implementation",
+    "stat3.lbl":"one-on-one, student-focused educational work",
+    "exp.eyebrow":"Experience","exp.h2":"Professional journey",
+    "exp.p":"Extensive field experience in the classroom, rehabilitation centre, and public education.",
+    "tl1.period":"2012 — 2026","tl1.role":"Preschool Educator / Specialist Instructor",
+    "tl1.org":"Premium Special Education &amp; Rehabilitation Centre <span class=\"place\">· Örnek Şehir — Türkiye</span>",
+    "tl1.li1":"Prepared and implemented Individualised Education Plans (IEP) tailored to each student's needs.",
+    "tl1.li2":"Conducted one-on-one educational sessions with students with autism, Down syndrome, and learning difficulties.",
+    "tl1.li3":"Supported the learning process through play-based and structured teaching methods.",
+    "tl1.li4":"Developed students' communication skills through language and speech exercises.",
+    "tl1.li5":"Regularly monitored and reported on student development; collaborated with families and specialist teams.",
+    "tl2.period":"Teaching","tl2.role":"Master Instructor / Trainer",
+    "tl2.org":"Community Learning Centre <span class=\"place\">· Örnek Şehir — Türkiye</span>",
+    "tl2.li1":"Prepared and delivered training programmes for individuals of different ages and developmental levels.",
+    "tl2.li2":"Integrated behaviour management and anger control techniques into daily teaching.",
+    "tl2.li3":"Developed materials to support students in reaching their individual learning goals.",
+    "exp2.eyebrow":"Areas of Expertise","exp2.h2":"What I work on",
+    "c1.h3":"Individualised Education Plan (IEP)","c1.p":"Preparing, implementing, and evaluating plans according to each student's individual needs.",
+    "c2.h3":"Special Education","c2.p":"One-on-one work with students with autism spectrum disorder, Down syndrome, and learning difficulties.",
+    "c3.h3":"Language &amp; Speech Development","c3.p":"Supporting students' communication skills through language and speech exercises.",
+    "c4.h3":"Behaviour Management","c4.p":"Integrating anger control and classroom management techniques into daily teaching.",
+    "c5.h3":"Development Monitoring","c5.p":"Regular tracking, reporting, and replanning of student development according to targets.",
+    "c6.h3":"Family &amp; Team Collaboration","c6.p":"A holistic education approach through strong collaboration with families and specialist teams.",
+    "svc.eyebrow":"Services","svc.h2":"Sessions I offer",
+    "svc.p":"Each session is planned according to the student's individual needs and developmental level.",
+    "s1.badge":"Individual","s1.h3":"Individual Special Education Session",
+    "s1.desc":"A one-on-one, IEP-based support session for students with autism, Down syndrome, or learning difficulties.",
+    "s1.li1":"Individualised plan implementation","s1.li2":"Language &amp; speech exercises",
+    "s1.li3":"Behaviour support","s1.li4":"Brief progress note after session","s1.duration":"45 minutes",
+    "s2.badge":"Most Popular","s2.h3":"Monthly Support Package",
+    "s2.desc":"A regular, planned education process with 2 sessions per week. Development monitoring and family consultations included.",
+    "s2.li1":"8 individual sessions per month","s2.li2":"Monthly development report",
+    "s2.li3":"Regular feedback with family","s2.li4":"Priority booking","s2.duration":"8 × 45 min",
+    "s3.badge":"Consultation","s3.h3":"Family Consultation Session",
+    "s3.desc":"A session for parents covering techniques applicable at home and strategies for the student's development.",
+    "s3.li1":"One-on-one family meeting","s3.li2":"Recommendations for the home environment","s3.li3":"Answers to your questions","s3.duration":"30 minutes",
+    "per.session":"/ session","per.month":"/ month",
+    "svc.note":"💡 For pricing, please contact directly or book an appointment below.",
+    "bk.eyebrow":"Booking System","bk.h2":"Choose a time that suits you",
+    "bk.p":"I work full-time; only my genuinely available slots appear in the calendar. Choose what works best for you.",
+    "bk.r1.title":"Available times","bk.r1.p":"Only my real available slots appear. Booked times are automatically closed.",
+    "bk.r2.title":"Confirmation email","bk.r2.p":"After booking, an automatic confirmation email is sent to you.",
+    "bk.r3.title":"Payment","bk.r3.p":"After booking, transfer payment via IBAN and send the receipt by email or WhatsApp.",
+    "bk.r4.title":"Cancellation policy","bk.r4.p":"Please notify at least 24 hours in advance if you need to cancel or reschedule.",
+    "cal.badge":"⚙️ Setup Required","cal.h3":"Calendar Coming Here",
+    "cal.p":"Once the Calendly account is set up, the interactive calendar will appear here.",
+    "cal.s1.title":"calendly.com — free registration","cal.s1.p":"Create an account, set up a session type.",
+    "cal.s2.title":"Enter available times","cal.s2.p":"Only the hours you are available are selected.",
+    "cal.s3.title":"Change one line in HTML","cal.s3.p":"Paste the link; the calendar goes live instantly.",
+    "cal.cta":"Contact Directly for Now",
+    "pay.eyebrow":"Payment Information","pay.h2":"Safe and easy bank transfer",
+    "pay.p":"All payments are made by bank transfer (IBAN/EFT) before the session. No transaction fee.",
+    "wf.title":"How does it work?",
+    "wf1.title":"Book your appointment","wf1.p":"Choose your preferred time from the calendar above and complete the form.",
+    "wf2.title":"Make the transfer","wf2.p":"Transfer the session fee to the IBAN below — at least 3 hours before the session.",
+    "wf3.title":"Send the receipt","wf3.p":"Share a screenshot of the payment confirmation by email or WhatsApp.",
+    "wf4.title":"Session begins","wf4.p":"Once payment is confirmed, your appointment is finalised.",
+    "iban.title":"Bank Transfer","iban.sub":"EFT / IBAN — no commission",
+    "iban.holder.lbl":"Account Holder","iban.bank.lbl":"Bank","iban.bank.val":"— Enter your bank name here —",
+    "iban.desc.lbl":"Description (required)","iban.desc.val":"Full Name + Session Date",
+    "iban.copy":"Copy","iban.note":"To update the bank name and IBAN, edit the relevant 2 lines in the HTML file.",
+    "edu.eyebrow":"Education &amp; Competencies","edu.h2":"Academic background and certificates",
+    "edu.title":"Education","edu.deg":"Bachelor's Degree — Pre-School Teaching","edu.uni":"Anadolu University",
+    "langs.title":"Languages","lang1.name":"Turkish","lang1.lvl":"Native","lang2.name":"English","lang2.lvl":"Intermediate",
+    "certs.title":"Certificates &amp; Professional Development",
+    "cert1":"Specialist Instructor Training in Special Education","cert2":"Pedagogical Formation",
+    "cert3":"Play Therapy Certificate","cert4":"Anger Management Training",
+    "cert5":"Language &amp; Speech Exercises Training","cert6":"Occupational Health and Safety",
+    "skills.title":"Core Competencies","sk1":"Special Education","sk2":"Pedagogy",
+    "sk3":"Learning Difficulties","sk4":"Language &amp; Speech","sk5":"Classroom Management",
+    "ct.eyebrow":"Contact","ct.h2":"Let's work together",
+    "ct.p":"For questions about sessions or special situations, you can contact me directly.",
+    "ct.email.lbl":"Email","ct.loc.lbl":"Location","ct.loc.val":"Sample City — Turkey",
+    "form.name.lbl":"Full Name","form.name.ph":"Enter your name",
+    "form.email.lbl":"Email","form.email.ph":"Your email address",
+    "form.msg.lbl":"Your Message","form.msg.ph":"Write your message briefly...",
+    "form.submit":"Send Message","form.note":"Clicking Send will open your email application with your message ready.",
+    "foot.privacy":"Privacy / KVKK","foot.cookies":"Cookie Policy","foot.role":"Special Education &amp; Preschool Teacher",
+    "tab.privacy":"Privacy / KVKK","tab.cookies":"Cookie Policy",
+    "ck.text":"This site uses technical cookies and Google Fonts (external server). By continuing you accept our <a onclick=\"openModal('cookies')\">cookie policy</a>.",
+    "ck.link":"cookie policy","ck.more":"Learn More","ck.accept":"Accept"
+  }
+};
+
+// ============================================================
+// LEGAL MODAL CONTENT
+// ============================================================
+const LEGAL = {
+  privacy: {
+    tr: `<h3>Veri Sorumlusu</h3>
+<p>Bu web sitesinin veri sorumlusu <strong>Evergreen Learning Studio</strong>'dir.<br>
+İletişim: <a href="mailto:hello@evergreenlearningstudio.com">hello@evergreenlearningstudio.com</a> · Örnek Şehir — Türkiye, Türkiye</p>
+<h3>Hangi Veriler İşleniyor?</h3>
+<p>İletişim formu aracılığıyla yalnızca şu bilgiler toplanır: ad-soyad, e-posta adresi ve mesaj içeriği.</p>
+<h3>İşleme Amacı</h3>
+<p>Toplanan veriler yalnızca randevu ve bilgi taleplerinizi yanıtlamak amacıyla kullanılmaktadır. Üçüncü taraflara satılmaz veya pazarlama amacıyla kullanılmaz.</p>
+<h3>Hukuki Dayanak</h3>
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) m. 5/2(f) uyarınca veri sorumlusunun meşru menfaati kapsamında işlenmektedir.</p>
+<h3>Veri Aktarımı</h3>
+<p>Randevu sistemi aktif edildiğinde <strong>Calendly Inc.</strong> (ABD) teknik hizmet sağlayıcı olarak kullanılacaktır. Calendly'nin gizlilik politikası için: <a href="https://calendly.com/privacy" target="_blank" rel="noopener">calendly.com/privacy</a></p>
+<h3>Saklama Süresi</h3>
+<p>İletişim talepleri yanıtlandıktan sonra en fazla <strong>12 ay</strong> saklanır ve ardından silinir.</p>
+<h3>Haklarınız (KVKK m. 11)</h3>
+<ul>
+<li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+<li>İşlenmişse bilgi talep etme</li>
+<li>Yanlış veya eksik verilerin düzeltilmesini isteme</li>
+<li>Verilerin silinmesini talep etme</li>
+<li>İşlemeye itiraz etme</li>
+</ul>
+<div class="highlight">Haklarınızı kullanmak için: <strong>hello@evergreenlearningstudio.com</strong> adresine yazabilirsiniz.</div>`,
+    en: `<h3>Data Controller</h3>
+<p>The data controller for this website is <strong>Evergreen Learning Studio</strong>.<br>
+Contact: <a href="mailto:hello@evergreenlearningstudio.com">hello@evergreenlearningstudio.com</a> · Örnek Şehir — Türkiye, Turkey</p>
+<h3>What Data is Collected?</h3>
+<p>Only the following information is collected via the contact form: full name, email address, and message content.</p>
+<h3>Purpose of Processing</h3>
+<p>Collected data is used solely to respond to appointment and information requests. It is never sold to third parties or used for marketing.</p>
+<h3>Legal Basis</h3>
+<p>Processed under the legitimate interests of the data controller pursuant to Turkey's Personal Data Protection Law No. 6698 (KVKK) Art. 5/2(f).</p>
+<h3>Data Transfers</h3>
+<p>When the booking system is activated, <strong>Calendly Inc.</strong> (USA) will be used as a technical service provider. For Calendly's privacy policy: <a href="https://calendly.com/privacy" target="_blank" rel="noopener">calendly.com/privacy</a></p>
+<h3>Retention Period</h3>
+<p>Contact requests are retained for a maximum of <strong>12 months</strong> after being answered, then deleted.</p>
+<h3>Your Rights (KVKK Art. 11)</h3>
+<ul>
+<li>Right to learn whether your personal data is processed</li>
+<li>Right to request information if it is</li>
+<li>Right to request correction of inaccurate or incomplete data</li>
+<li>Right to request deletion of your data</li>
+<li>Right to object to processing</li>
+</ul>
+<div class="highlight">To exercise your rights, write to: <strong>hello@evergreenlearningstudio.com</strong></div>`
+  },
+  cookies: {
+    tr: `<h3>Çerez Nedir?</h3>
+<p>Çerezler, web sitelerinin tarayıcınıza yerleştirdiği küçük metin dosyalarıdır. Bu site yalnızca gerekli teknik çerezleri kullanmaktadır.</p>
+<h3>Bu Sitede Kullanılan Çerezler</h3>
+<ul>
+<li><strong>Dil tercihi (lang):</strong> Seçtiğiniz dil kaydedilir. localStorage'a kaydedilir; sunucuya gönderilmez.</li>
+<li><strong>Çerez onayı (cookieOK):</strong> Bu bannerı onayladığınızda kaydedilir. localStorage'a kaydedilir.</li>
+</ul>
+<h3>Üçüncü Taraf Hizmetler</h3>
+<p><strong>Google Fonts:</strong> Yazı tipleri Google sunucularından yüklenmektedir. Bu, Google'ın IP adresinizi işleyebileceği anlamına gelir. Daha fazla bilgi: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Gizlilik Politikası</a></p>
+<p><strong>Calendly</strong> (randevu sistemi aktif edildiğinde): Calendly kendi çerezlerini kullanabilir. Daha fazla bilgi: <a href="https://calendly.com/privacy" target="_blank" rel="noopener">Calendly Gizlilik Politikası</a></p>
+<h3>Çerezleri Yönetme</h3>
+<p>Tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz. Ancak bu, bazı site işlevlerini etkileyebilir.</p>
+<div class="highlight">Bu site analitik, pazarlama veya reklam çerezi kullanmamaktadır.</div>`,
+    en: `<h3>What Are Cookies?</h3>
+<p>Cookies are small text files placed on your browser by websites. This site uses only necessary technical cookies.</p>
+<h3>Cookies Used on This Site</h3>
+<ul>
+<li><strong>Language preference (lang):</strong> Saves your selected language. Stored in localStorage; not sent to any server.</li>
+<li><strong>Cookie consent (cookieOK):</strong> Saved when you accept this banner. Stored in localStorage.</li>
+</ul>
+<h3>Third-Party Services</h3>
+<p><strong>Google Fonts:</strong> Fonts are loaded from Google servers. This means Google may process your IP address. More info: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></p>
+<p><strong>Calendly</strong> (when booking system is activated): Calendly may use its own cookies. More info: <a href="https://calendly.com/privacy" target="_blank" rel="noopener">Calendly Privacy Policy</a></p>
+<h3>Managing Cookies</h3>
+<p>You can delete or block cookies in your browser settings. However, this may affect some site functions.</p>
+<div class="highlight">This site does not use analytics, marketing, or advertising cookies.</div>`
+  }
+};
+
+// ============================================================
+// LANGUAGE ENGINE
+// ============================================================
+let currentLang = localStorage.getItem("lang") || "tr";
+let currentTab = "privacy";
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem("lang", lang);
+  document.documentElement.lang = lang;
+  // Update all text nodes
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (T[lang][key] !== undefined) el.innerHTML = T[lang][key];
+  });
+  // Update placeholders
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => {
+    const key = el.getAttribute("data-i18n-ph");
+    if (T[lang][key] !== undefined) el.placeholder = T[lang][key];
+  });
+  // Update lang button
+  document.getElementById("langFlag").textContent = lang === "tr" ? "🇹🇷" : "🇬🇧";
+  document.getElementById("langLabel").textContent = lang.toUpperCase();
+  document.getElementById("optTR").classList.toggle("active", lang === "tr");
+  document.getElementById("optEN").classList.toggle("active", lang === "en");
+  // Refresh modal if open
+  if (document.getElementById("privacyModal").style.display !== "none") {
+    renderModalContent(currentTab);
+  }
+  closeLangMenu();
+}
+
+function toggleLangMenu() {
+  const btn = document.getElementById("langBtn");
+  const menu = document.getElementById("langMenu");
+  const open = menu.classList.contains("open");
+  btn.classList.toggle("open", !open);
+  menu.classList.toggle("open", !open);
+}
+
+function closeLangMenu() {
+  document.getElementById("langBtn").classList.remove("open");
+  document.getElementById("langMenu").classList.remove("open");
+}
+
+document.addEventListener("click", e => {
+  if (!e.target.closest(".lang-wrap")) closeLangMenu();
+});
+
+// ============================================================
+// COOKIE BANNER
+// ============================================================
+function acceptCookies() {
+  localStorage.setItem("cookieOK", "1");
+  document.getElementById("cookieBanner").style.display = "none";
+}
+
+// ============================================================
+// MODAL
+// ============================================================
+function openModal(tab) {
+  currentTab = tab || "privacy";
+  document.getElementById("privacyModal").style.display = "flex";
+  document.body.style.overflow = "hidden";
+  switchTab(currentTab);
+}
+
+function closeModal() {
+  document.getElementById("privacyModal").style.display = "none";
+  document.body.style.overflow = "";
+}
+
+function closeModalOutside(e) {
+  if (e.target === document.getElementById("privacyModal")) closeModal();
+}
+
+function switchTab(tab) {
+  currentTab = tab;
+  document.getElementById("tabPrivacy").classList.toggle("active", tab === "privacy");
+  document.getElementById("tabCookies").classList.toggle("active", tab === "cookies");
+  renderModalContent(tab);
+}
+
+function renderModalContent(tab) {
+  const lang = currentLang;
+  const title = {
+    privacy: { tr: "Gizlilik &amp; KVKK", en: "Privacy &amp; KVKK" },
+    cookies: { tr: "Çerez Politikası", en: "Cookie Policy" }
+  };
+  document.getElementById("modalTitle").innerHTML = title[tab][lang];
+  document.getElementById("modalBody").innerHTML = LEGAL[tab][lang];
+}
+
+// ============================================================
+// CONTACT FORM
+// ============================================================
+document.getElementById("contactForm").addEventListener("submit", function(ev) {
+  ev.preventDefault();
+  const name = document.getElementById("fname").value.trim();
+  const email = document.getElementById("femail").value.trim();
+  const msg = document.getElementById("fmsg").value.trim();
+  if (!name || !email || !msg) {
+    alert(currentLang === "tr" ? "Lütfen tüm alanları doldurun." : "Please fill in all fields.");
+    return;
+  }
+  const subject = encodeURIComponent((currentLang === "tr" ? "Web sitesi mesajı — " : "Website message — ") + name);
+  const body = encodeURIComponent((currentLang === "tr" ? "Ad Soyad: " : "Name: ") + name + "\n" + (currentLang === "tr" ? "E-posta: " : "Email: ") + email + "\n\n" + (currentLang === "tr" ? "Mesaj:\n" : "Message:\n") + msg);
+  window.location.href = "mailto:hello@evergreenlearningstudio.com?subject=" + subject + "&body=" + body;
+});
+
+// ============================================================
+// IBAN COPY
+// ============================================================
+function copyIBAN() {
+  const val = document.getElementById("ibanVal").textContent.trim();
+  const btn = document.getElementById("copyBtn");
+  navigator.clipboard.writeText(val).then(() => {
+    btn.querySelector("[data-i18n]").textContent = currentLang === "tr" ? "✓ Kopyalandı" : "✓ Copied";
+    setTimeout(() => { btn.querySelector("[data-i18n]").innerHTML = T[currentLang]["iban.copy"]; }, 2000);
+  });
+}
+
+// ============================================================
+// SCROLL REVEAL
+// ============================================================
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+// ============================================================
+// INIT
+// ============================================================
+document.getElementById("year").textContent = new Date().getFullYear();
+setLang(currentLang);
+if (!localStorage.getItem("cookieOK")) {
+  document.getElementById("cookieBanner").style.display = "flex";
+} else {
+  document.getElementById("cookieBanner").style.display = "none";
+}
+</script>
+</body>
+</html>

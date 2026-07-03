@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Agreement — Evergreen Learning Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#143A2E; --green-2:#1d5240; --amber:#D29239;
+  --cream:#F7F4EC; --paper:#ffffff; --ink:#23271f; --muted:#5b6660;
+  --line:#d8d2c4; --line-2:#cfc8b6; --field-bg:#fcfbf7;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--cream); color:var(--ink);
+  font-family:"Figtree",system-ui,Segoe UI,Roboto,sans-serif;
+  font-size:15px; line-height:1.55;
+}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif; font-weight:600; color:var(--green); margin:0}
+
+/* ---- toolbar (screen only) ---- */
+.toolbar{
+  position:sticky; top:0; z-index:20;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  padding:12px 20px; background:var(--green); color:#fff;
+}
+.toolbar .brand{display:flex; align-items:center; gap:10px; font-family:"Fraunces",serif; font-size:16px}
+.toolbar .brand svg{flex:none}
+.toolbar .controls{display:flex; align-items:center; gap:10px}
+.langset{display:inline-flex; border:1px solid rgba(255,255,255,.4); border-radius:999px; overflow:hidden}
+.lang-btn{
+  appearance:none; border:0; background:transparent; color:#fff;
+  font-family:"Figtree",sans-serif; font-size:13px; font-weight:600;
+  padding:6px 14px; cursor:pointer; letter-spacing:.02em;
+}
+.lang-btn[aria-pressed="true"]{background:var(--amber); color:#1a1a1a}
+.print-btn{
+  appearance:none; border:0; border-radius:999px; cursor:pointer;
+  background:#fff; color:var(--green); font-family:"Figtree",sans-serif;
+  font-weight:600; font-size:13px; padding:7px 16px;
+  display:inline-flex; align-items:center; gap:7px;
+}
+.print-btn:hover{background:var(--amber); color:#1a1a1a}
+
+/* ---- sheet ---- */
+.wrap{padding:28px 16px 60px}
+.sheet{
+  max-width:820px; margin:0 auto; background:var(--paper);
+  border:1px solid var(--line); border-radius:14px; overflow:hidden;
+  box-shadow:0 18px 48px -28px rgba(20,58,46,.45);
+}
+.sheet-head{
+  background:var(--green); color:#fff; padding:28px 36px;
+  display:flex; align-items:center; gap:18px;
+}
+.sheet-head .mark{flex:none}
+.sheet-head .ht{display:flex; flex-direction:column; gap:3px}
+.sheet-head .org{font-family:"Fraunces",serif; font-size:17px; font-weight:500; letter-spacing:.01em}
+.sheet-head .role{font-size:12.5px; color:#cfe0d8; font-weight:500; letter-spacing:.04em; text-transform:uppercase}
+.sheet-head h1{color:#fff; font-size:24px; line-height:1.15; margin-top:2px}
+.sheet-head .sub{font-size:12.5px; color:#cfe0d8; margin-top:2px}
+.accent-rule{height:4px; background:var(--amber)}
+
+.note{
+  margin:0; padding:12px 36px; background:#fbf4e6;
+  border-bottom:1px solid var(--line);
+  font-size:12.5px; color:#6b5a37;
+}
+.note strong{color:#8a6d2c}
+
+.body{padding:30px 36px 38px}
+
+/* ---- sections ---- */
+.sec{margin:0 0 26px; break-inside:avoid}
+.sec h2{
+  font-size:16.5px; display:flex; align-items:baseline; gap:11px;
+  padding-bottom:8px; border-bottom:1px solid var(--line);
+  margin-bottom:16px;
+}
+.sec h2 .num{
+  font-family:"Figtree",sans-serif; font-size:12px; font-weight:600;
+  color:var(--amber); border:1.5px solid var(--amber); border-radius:50%;
+  width:24px; height:24px; display:inline-flex; align-items:center;
+  justify-content:center; flex:none;
+}
+
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:14px 22px}
+.field{display:flex; flex-direction:column; gap:5px; margin-bottom:14px}
+.grid .field{margin-bottom:0}
+.field.col-2{grid-column:1 / -1}
+label{font-size:12.5px; font-weight:600; color:var(--muted)}
+input[type=text], input[type=tel], input[type=email], input[type=date], textarea{
+  font-family:"Figtree",sans-serif; font-size:14.5px; color:var(--ink);
+  background:var(--field-bg); border:1px solid var(--line-2); border-radius:7px;
+  padding:9px 11px; width:100%; min-height:40px;
+}
+textarea{min-height:74px; resize:vertical; line-height:1.5}
+input:focus, textarea:focus{
+  outline:none; border-color:var(--green-2);
+  box-shadow:0 0 0 3px rgba(29,82,64,.14);
+}
+
+/* options */
+.opts{display:flex; flex-direction:column; gap:9px; margin-top:2px}
+.opts.row{flex-direction:row; flex-wrap:wrap; gap:9px 22px}
+.opt{display:flex; align-items:flex-start; gap:9px; font-size:14px; color:var(--ink); cursor:pointer}
+.opt input{margin-top:2px; width:17px; height:17px; flex:none; accent-color:var(--green)}
+
+/* legal text */
+.legal{font-size:13.5px; color:#3c423a; margin:0 0 10px}
+.legal a{color:var(--green-2)}
+ul.legal{padding-left:20px; margin:0 0 12px}
+ul.legal li{margin-bottom:5px}
+
+/* explicit-consent callout */
+.consent{
+  border:1.5px solid var(--green); border-radius:10px; padding:16px 18px;
+  background:#f4f7f4; margin-bottom:14px; break-inside:avoid;
+}
+.consent.strong-consent{border-color:var(--amber); background:#fbf4e6}
+.consent .opt{font-size:14px; font-weight:500}
+
+/* signature */
+.signrow{display:grid; grid-template-columns:1fr 1fr; gap:30px; margin-top:8px}
+.sigbox{display:flex; flex-direction:column; gap:6px}
+.sigline{
+  border-bottom:1.4px solid var(--ink); height:42px; margin-bottom:3px;
+}
+.sigbox .cap{font-size:12px; color:var(--muted); font-weight:600}
+.sigbox input{background:transparent; border:0; border-bottom:1.4px solid var(--ink);
+  border-radius:0; padding:4px 2px; min-height:36px}
+.sigbox input:focus{box-shadow:none; border-bottom-color:var(--green-2)}
+
+.footer-line{
+  margin:30px 36px 0; padding-top:14px; border-top:1px solid var(--line);
+  font-size:11.5px; color:var(--muted); display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+}
+
+@media (max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .signrow{grid-template-columns:1fr; gap:22px}
+  .sheet-head{padding:22px}
+  .body{padding:22px}
+  .note,.footer-line{padding-left:22px; padding-right:22px}
+}
+
+/* ===========  PRINT  =========== */
+
+/* ── Send guide (screen only, hidden on print) ── */
+.send-guide{
+  margin:32px 36px 0; padding:24px 28px 28px;
+  background:#f4f7f4; border:2px solid var(--green); border-radius:12px;
+}
+.send-guide h3{
+  font-family:"Fraunces",serif; font-size:18px; color:var(--green); margin:0 0 6px;
+}
+.sg-intro{font-size:13.5px; color:var(--muted); margin:0 0 18px}
+.sg-tabs{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px}
+.sg-tab{
+  appearance:none; border:1.5px solid var(--line-2); border-radius:999px;
+  background:#fff; color:var(--green); font-family:"Figtree",sans-serif;
+  font-size:13px; font-weight:600; padding:7px 16px; cursor:pointer;
+}
+.sg-tab[aria-selected="true"]{background:var(--green); color:#fff; border-color:var(--green)}
+.sg-panel{display:none}
+.sg-panel.active{display:block}
+.sg-panel ol{margin:0 0 6px; padding-left:22px; font-size:13.5px; line-height:1.75; color:var(--ink)}
+.sg-panel ol li{margin-bottom:5px}
+.sg-divider{
+  display:flex; align-items:center; gap:12px;
+  font-size:12px; color:var(--muted); margin:18px 0;
+}
+.sg-divider::before,.sg-divider::after{content:""; flex:1; height:1px; background:var(--line)}
+.wa-btn{
+  display:inline-flex; align-items:center; gap:10px;
+  background:#25D366; color:#fff; border:0; border-radius:10px;
+  font-family:"Figtree",sans-serif; font-size:14px; font-weight:600;
+  padding:12px 22px; cursor:pointer; text-decoration:none;
+}
+.wa-btn:hover{background:#1ebe5d}
+.wa-btn svg{flex:none}
+.sg-email{font-size:13px; color:var(--muted); margin:14px 0 0}
+.sg-email strong{color:var(--green-2)}
+@media(max-width:640px){
+  .send-guide{margin:24px 0 0; border-radius:0 0 14px 14px; border-left:0; border-right:0}
+}
+@media print{.send-guide{display:none !important}}
+
+@media print{
+  @page{size:A4; margin:16mm 15mm}
+  body{background:#fff; font-size:11.5pt}
+  .toolbar{display:none !important}
+  .wrap{padding:0}
+  .sheet{max-width:none; border:0; border-radius:0; box-shadow:none}
+  /* lighter header to save ink, keep brand */
+  .sheet-head{
+    background:#fff !important; color:var(--green) !important;
+    padding:0 0 10px; border-bottom:2px solid var(--green);
+  }
+  .sheet-head .role,.sheet-head .sub{color:var(--muted) !important}
+  .sheet-head h1{color:var(--green) !important; font-size:20pt}
+  .sheet-head .mark .leaf{fill:var(--green) !important}
+  .accent-rule{background:var(--amber); -webkit-print-color-adjust:exact; print-color-adjust:exact}
+  .note{background:#f6f1e6 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; padding:8px 0}
+  .body{padding:14px 0 0}
+  .footer-line{margin:18px 0 0}
+  .sec h2 .num{-webkit-print-color-adjust:exact; print-color-adjust:exact}
+  input,textarea{background:#fff !important; border-color:#888 !important}
+  .consent{-webkit-print-color-adjust:exact; print-color-adjust:exact; break-inside:avoid}
+  .sec{break-inside:avoid}
+  .signrow{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <div class="brand"><svg width="22" height="22" viewBox="0 0 32 32" fill="none"><path class="leaf" d="M16 28V13" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/><path class="leaf" d="M16 16c0-5 4-8 9-8 0 5-4 8-9 8z" fill="#fff"/><path class="leaf" d="M16 19c0-4-3-6-7-6 0 4 3 6 7 6z" fill="#D29239"/></svg><span>Evergreen Learning Studio</span></div>
+  <div class="controls">
+    <div class="langset" role="group" aria-label="Language">
+      <button class="lang-btn" data-lang="tr">TR</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <button id="printBtn" class="print-btn" type="button">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      <span data-i18n="print"></span>
+    </button>
+  </div>
+</div>
+
+<div class="wrap">
+<div class="sheet">
+  <div class="sheet-head">
+    <svg class="mark" width="46" height="46" viewBox="0 0 32 32" fill="none"><path class="leaf" d="M16 29V12" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/><path class="leaf" d="M16 16c0-5.5 4.4-8.8 10-8.8C26 12.7 21.6 16 16 16z" fill="#fff"/><path class="leaf" d="M16 19.5c0-4.2-3.3-6.6-7.6-6.6 0 4.2 3.3 6.6 7.6 6.6z" fill="#D29239"/></svg>
+    <div class="ht">
+      <span class="org">Evergreen Learning Studio</span>
+      <span class="role" data-i18n="role"></span>
+      <h1 data-i18n="formTitle"></h1>
+      <span class="sub" data-i18n="formSub"></span>
+    </div>
+  </div>
+  <div class="accent-rule"></div>
+  <p class="note"><strong data-i18n="draftLabel"></strong> <span data-i18n="draftNote"></span></p>
+  <div class="body">
+<section class="sec"><h2><span class="num">1</span><span data-i18n="s1"></span></h2><p class="legal" data-i18n="provider"></p><div class="grid"><div class="field"><label for="h_name" data-i18n="clientName"></label><input type="text" id="h_name" name="h_name"></div><div class="field"><label for="h_tc" data-i18n="clientTc"></label><input type="text" id="h_tc" name="h_tc"></div><div class="field"><label for="h_phone" data-i18n="clientPhone"></label><input type="tel" id="h_phone" name="h_phone"></div><div class="field"><label for="h_email" data-i18n="clientEmail"></label><input type="email" id="h_email" name="h_email"></div><div class="field col-2"><label for="h_addr" data-i18n="clientAddr"></label><input type="text" id="h_addr" name="h_addr"></div></div></section><section class="sec"><h2><span class="num">2</span><span data-i18n="s2"></span></h2><div class="grid"><div class="field col-2"><label for="c_name" data-i18n="childName"></label><input type="text" id="c_name" name="c_name"></div></div><div class="field col-2"><label data-i18n="svcLabel"></label><div class="opts row"><label class="opt"><input type="radio" name="svc" id="svc1"><span data-i18n="svcInd"></span></label><label class="opt"><input type="radio" name="svc" id="svc2"><span data-i18n="svcGroup"></span></label><label class="opt"><input type="radio" name="svc" id="svc3"><span data-i18n="svcOnline"></span></label><label class="opt"><input type="radio" name="svc" id="svc4"><span data-i18n="svcAssess"></span></label></div></div></section><section class="sec"><h2><span class="num">3</span><span data-i18n="s3"></span></h2><div class="grid"><div class="field"><label for="ses_len" data-i18n="sesLen"></label><input type="text" id="ses_len" name="ses_len"></div><div class="field"><label for="ses_freq" data-i18n="sesFreq"></label><input type="text" id="ses_freq" name="ses_freq"></div><div class="field"><label for="start_date" data-i18n="startDate"></label><input type="date" id="start_date" name="start_date"></div></div></section><section class="sec"><h2><span class="num">4</span><span data-i18n="s4"></span></h2><div class="grid"><div class="field"><label for="fee" data-i18n="fee"></label><input type="text" id="fee" name="fee"></div></div><div class="field col-2"><label data-i18n="payCycleLabel"></label><div class="opts row"><label class="opt"><input type="radio" name="pay" id="pay1"><span data-i18n="payPer"></span></label><label class="opt"><input type="radio" name="pay" id="pay2"><span data-i18n="payWeek"></span></label><label class="opt"><input type="radio" name="pay" id="pay3"><span data-i18n="payMonth"></span></label></div></div><p class="legal" data-i18n="payMethod"></p></section><section class="sec"><h2><span class="num">5</span><span data-i18n="s5"></span></h2><p class="legal" data-i18n="cancelText"></p><div class="grid"><div class="field"><label for="cancel_hours" data-i18n="cancelHours"></label><input type="text" id="cancel_hours" name="cancel_hours"></div></div></section><section class="sec"><h2><span class="num">6</span><span data-i18n="s6"></span></h2><p class="legal" data-i18n="confid"></p></section><section class="sec"><h2><span class="num">7</span><span data-i18n="s7"></span></h2><p class="legal" data-i18n="kvkkRef"></p></section><section class="sec"><h2><span class="num">8</span><span data-i18n="s8"></span></h2><p class="legal" data-i18n="termText"></p></section><section class="sec"><h2><span class="num">9</span><span data-i18n="s9"></span></h2><div class="signrow"><div class="sigbox">
+          <input type="text" id="prov_sign" name="prov_sign" aria-labelledby="prov_sign_c">
+          <span class="cap" id="prov_sign_c" data-i18n="providerSignCap"></span>
+          <div style="height:10px"></div>
+          <input type="text" id="prov_date" name="prov_date" placeholder="" data-i18n-ph="datePh">
+          <span class="cap" data-i18n="dateSign"></span>
+        </div><div class="sigbox">
+          <input type="text" id="cli_sign" name="cli_sign" aria-labelledby="cli_sign_c">
+          <span class="cap" id="cli_sign_c" data-i18n="clientSignCap"></span>
+          <div style="height:10px"></div>
+          <input type="text" id="cli_date" name="cli_date" placeholder="" data-i18n-ph="datePh">
+          <span class="cap" data-i18n="dateSign"></span>
+        </div></div></section>
+<div class="send-guide" id="sendGuide">
+  <h3 data-i18n="sendTitle"></h3>
+  <p class="sg-intro" data-i18n="sendIntro"></p>
+  <div class="sg-tabs" role="tablist">
+    <button class="sg-tab" role="tab" aria-selected="true"  data-panel="iphone"  data-i18n="deviceIphone"></button>
+    <button class="sg-tab" role="tab" aria-selected="false" data-panel="android" data-i18n="deviceAndroid"></button>
+    <button class="sg-tab" role="tab" aria-selected="false" data-panel="pc"      data-i18n="devicePC"></button>
+  </div>
+  <div class="sg-panel active" id="panel-iphone"><ol data-i18n="iphoneSteps"></ol></div>
+  <div class="sg-panel"        id="panel-android"><ol data-i18n="androidSteps"></ol></div>
+  <div class="sg-panel"        id="panel-pc"><ol data-i18n="pcSteps"></ol></div>
+  <div class="sg-divider"><span data-i18n="orText"></span></div>
+  <a class="wa-btn" id="waBtn" href="https://wa.me/905000000000" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span data-i18n="whatsappBtn"></span>
+  </a>
+  <p class="sg-email" data-i18n="sendNote"></p>
+</div>
+
+  </div>
+  <div class="footer-line">
+    <span data-i18n="footerOrg"></span>
+    <span data-i18n="footerKvkk"></span>
+  </div>
+</div>
+</div>
+
+<script>
+const I18N = {"tr": {"print": "PDF Olarak Kaydet", "role": "Özel Eğitim Destek Stüdyosu", "draftLabel": "Taslak —", "draftNote": "Bu belge örnek bir şablondur. Yürürlüğe girmeden önce bir avukat veya KVKK uzmanı tarafından gözden geçirilmesi önerilir.", "footerOrg": "Evergreen Learning Studio · Örnek Şehir — Türkiye · hello@evergreenlearningstudio.com", "footerKvkk": "KVKK No. 6698 · kvkk.gov.tr", "dateSign": "Tarih", "datePh": "GG / AA / YYYY", "signTitle": "İmza", "formTitle": "Hizmet Sözleşmesi", "formSub": "Özel eğitim destek hizmeti için taraflar arası sözleşme", "s1": "Taraflar", "provider": "<strong>Hizmet Veren:</strong> Evergreen Learning Studio (Özel Eğitim ve Okul Öncesi Öğretmeni), Örnek Şehir — Türkiye — hello@evergreenlearningstudio.com.", "clientName": "Hizmet alan (veli / vasi) adı ve soyadı", "clientTc": "T.C. Kimlik No", "clientPhone": "Telefon", "clientEmail": "E-posta", "clientAddr": "Adres", "s2": "Hizmetin Konusu", "childName": "Çocuğun adı ve soyadı", "svcLabel": "Hizmet türü", "svcInd": "Bireysel seans", "svcGroup": "Grup seansı", "svcOnline": "Online seans", "svcAssess": "Değerlendirme", "s3": "Seans ve Program", "sesLen": "Seans süresi (dakika)", "sesFreq": "Haftalık seans sayısı", "startDate": "Başlangıç tarihi", "s4": "Ücret ve Ödeme", "fee": "Seans ücreti (TL)", "payCycleLabel": "Ödeme dönemi", "payPer": "Seans başı", "payWeek": "Haftalık", "payMonth": "Aylık", "payMethod": "<strong>Ödeme yöntemi:</strong> Banka havalesi / EFT (IBAN). IBAN bilgisi hizmet veren tarafından ayrıca bildirilir. Ödemeler, ilgili dönemin başında yapılır.", "s5": "İptal ve Telafi Politikası", "cancelText": "Seanslar, aşağıda belirtilen süreden önce haber verilmek kaydıyla ücretsiz olarak ertelenebilir. Zamanında haber verilmeyen seanslar yapılmış sayılır ve ücretlendirilir. Hizmet verenin iptal ettiği seanslar telafi edilir.", "cancelHours": "Asgari bildirim süresi (saat)", "s6": "Gizlilik", "confid": "Hizmet veren, çocuğa ve aileye ait tüm bilgileri gizli tutmayı ve yasal zorunluluklar dışında üçüncü kişilerle paylaşmamayı taahhüt eder. Gelişim raporları yalnızca aile ile paylaşılır.", "s7": "Kişisel Verilerin Korunması", "kvkkRef": "Kişisel verilerin işlenmesi, ayrı bir <strong>KVKK Veli Açık Rıza Formu</strong> ile düzenlenir ve bu sözleşmenin ayrılmaz parçasıdır. 6698 sayılı KVKK hükümleri uygulanır.", "s8": "Süre ve Fesih", "termText": "Bu sözleşme, başlangıç tarihinde yürürlüğe girer ve taraflardan birinin yazılı bildirimine kadar devam eder. Taraflar, en az bir hafta önceden yazılı bildirimde bulunarak sözleşmeyi feshedebilir. Ödenmiş ancak kullanılmamış seans ücretleri iade edilir.", "s9": "İmzalar", "providerSignCap": "Provider — Evergreen Learning Studio", "clientSignCap": "Hizmet alan — veli / vasi", "sendTitle": "Formu Nasıl Gönderirsiniz?", "sendIntro": "Formu doldurduktan sonra cihazınıza uygun adımları izleyerek PDF olarak kaydedin ve Evergreen Learning Studio'ye gönderin.", "deviceIphone": "📱 iPhone / iPad", "deviceAndroid": "📱 Android Telefon", "devicePC": "💻 Bilgisayar", "iphoneSteps": "<li>Ekranın altındaki <strong>Paylaş</strong> düğmesine dokunun (kare ve ok simgesi).</li><li>Listeden <strong>\"Yazdır\"</strong> seçeneğini seçin (görmüyorsanız aşağı kaydırın).</li><li>Küçük önizleme üzerinde parmaklarınızı açarak PDF'yi tam ekranda açın.</li><li>Sağ üstteki <strong>Paylaş</strong> düğmesine tekrar dokunun.</li><li><strong>WhatsApp</strong> veya <strong>Mail</strong> seçin → Evergreen Learning Studio'ye gönderin.</li>", "androidSteps": "<li>Tarayıcının sağ üst köşesindeki <strong>⋮ menüsüne</strong> dokunun.</li><li><strong>\"Yazdır\"</strong> seçeneğini seçin.</li><li>Yazıcı olarak <strong>\"PDF'ye Kaydet\"</strong> seçin.</li><li>Kaydet → PDF'yi WhatsApp veya e-posta ile gönderin.</li>", "pcSteps": "<li><strong>Ctrl + P</strong> (Windows) veya <strong>Cmd + P</strong> (Mac) tuşlarına basın.</li><li>Yazıcı listesinden <strong>\"PDF Olarak Kaydet\"</strong> seçin.</li><li>Dosyayı masaüstüne kaydedin.</li><li>PDF'yi <strong>e-posta</strong> veya <strong>WhatsApp</strong> ile gönderin.</li>", "orText": "— ya da —", "whatsappBtn": "WhatsApp ile Gönder", "whatsappMsg": "Merhaba Merhaba, formu doldurdum. PDF'yi ekte gönderiyorum.", "sendNote": "PDF'yi <strong>hello@evergreenlearningstudio.com</strong> adresine e-posta ile de gönderebilirsiniz.", "printBtnLabel": "PDF Olarak Kaydet"}, "en": {"print": "Save as PDF", "role": "Special Education Support Studio", "draftLabel": "Draft —", "draftNote": "This document is a sample template. It should be reviewed by a lawyer or KVKK specialist before being used.", "footerOrg": "Evergreen Learning Studio · Örnek Şehir — Türkiye · hello@evergreenlearningstudio.com", "footerKvkk": "KVKK Law No. 6698 · kvkk.gov.tr", "dateSign": "Date", "datePh": "DD / MM / YYYY", "signTitle": "Signature", "formTitle": "Service Agreement", "formSub": "Agreement between the parties for special education support", "s1": "Parties", "provider": "<strong>Provider:</strong> Evergreen Learning Studio (Special Education Support Studio), Örnek Şehir — Türkiye — hello@evergreenlearningstudio.com.", "clientName": "Client (parent / guardian) full name", "clientTc": "National ID No.", "clientPhone": "Phone", "clientEmail": "Email", "clientAddr": "Address", "s2": "Subject of Service", "childName": "Child's full name", "svcLabel": "Service type", "svcInd": "Individual session", "svcGroup": "Group session", "svcOnline": "Online session", "svcAssess": "Assessment", "s3": "Sessions and Schedule", "sesLen": "Session length (minutes)", "sesFreq": "Sessions per week", "startDate": "Start date", "s4": "Fee and Payment", "fee": "Session fee (TRY)", "payCycleLabel": "Payment cycle", "payPer": "Per session", "payWeek": "Weekly", "payMonth": "Monthly", "payMethod": "<strong>Payment method:</strong> Bank transfer / EFT (IBAN). The IBAN is provided separately by the provider. Payment is made at the start of each period.", "s5": "Cancellation and Make-up Policy", "cancelText": "Sessions may be rescheduled free of charge if notice is given before the period stated below. Sessions cancelled without timely notice are treated as held and are charged. Sessions cancelled by the provider are made up.", "cancelHours": "Minimum notice (hours)", "s6": "Confidentiality", "confid": "The provider undertakes to keep all information about the child and family confidential and not to share it with third parties except where legally required. Progress reports are shared only with the family.", "s7": "Protection of Personal Data", "kvkkRef": "Processing of personal data is governed by a separate <strong>KVKK Parental Consent Form</strong>, which forms an integral part of this agreement. The provisions of KVKK Law No. 6698 apply.", "s8": "Duration and Termination", "termText": "This agreement takes effect on the start date and continues until written notice by either party. Either party may terminate it with at least one week's written notice. Fees paid for unused sessions are refunded.", "s9": "Signatures", "providerSignCap": "Provider — Evergreen Learning Studio", "clientSignCap": "Client — parent / guardian", "sendTitle": "How to Send This Form", "sendIntro": "Once you have filled in the form, follow the steps for your device to save it as a PDF and send it to Evergreen Learning Studio.", "deviceIphone": "📱 iPhone / iPad", "deviceAndroid": "📱 Android Phone", "devicePC": "💻 Computer", "iphoneSteps": "<li>Tap the <strong>Share</strong> button at the bottom of the screen (square with an arrow).</li><li>Select <strong>\"Print\"</strong> from the list (scroll down if you don't see it).</li><li>Pinch out on the small preview to open the PDF full-screen.</li><li>Tap <strong>Share</strong> again in the top right.</li><li>Choose <strong>WhatsApp</strong> or <strong>Mail</strong> → send to Evergreen Learning Studio.</li>", "androidSteps": "<li>Tap the <strong>⋮ menu</strong> in the top right of your browser.</li><li>Select <strong>\"Print\"</strong>.</li><li>Choose <strong>\"Save as PDF\"</strong> as the printer.</li><li>Save → send the PDF via WhatsApp or email.</li>", "pcSteps": "<li>Press <strong>Ctrl + P</strong> (Windows) or <strong>Cmd + P</strong> (Mac).</li><li>Choose <strong>\"Save as PDF\"</strong> from the printer list.</li><li>Save the file to your desktop.</li><li>Send the PDF via <strong>email</strong> or <strong>WhatsApp</strong>.</li>", "orText": "— or —", "whatsappBtn": "Send via WhatsApp", "whatsappMsg": "Hello Hello, I have filled in the form. I am sending the PDF in this message.", "sendNote": "You can also email the PDF to <strong>hello@evergreenlearningstudio.com</strong>", "printBtnLabel": "Save as PDF"}};
+let lang = localStorage.getItem('ztt_lang') || 'tr';
+function applyLang(l){
+  if(!I18N[l]) l='tr';
+  lang=l; localStorage.setItem('ztt_lang',l);
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    var k=el.getAttribute('data-i18n');
+    if(I18N[l][k]!==undefined) el.innerHTML=I18N[l][k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(function(el){
+    var k=el.getAttribute('data-i18n-ph');
+    if(I18N[l][k]!==undefined) el.setAttribute('placeholder', I18N[l][k]);
+  });
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.setAttribute('aria-pressed', b.dataset.lang===l ? 'true':'false');
+  });
+}
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.lang-btn').forEach(function(b){
+    b.addEventListener('click',function(){applyLang(b.dataset.lang);});
+  });
+  document.getElementById('printBtn').addEventListener('click',function(){window.print();});
+  applyLang(lang);
+});
+
+// ── Send guide tab switching ──────────────────────────────────────────────
+document.querySelectorAll('.sg-tab').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.sg-tab').forEach(function(b){ b.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.sg-panel').forEach(function(p){ p.classList.remove('active'); });
+    btn.setAttribute('aria-selected','true');
+    document.getElementById('panel-'+btn.dataset.panel).classList.add('active');
+  });
+});
+// ── WhatsApp message updates with language ────────────────────────────────
+function updateWaBtn(){
+  var msg = (I18N[lang] && I18N[lang].whatsappMsg) ? I18N[lang].whatsappMsg : '';
+  document.getElementById('waBtn').href = 'https://wa.me/905000000000?text='+encodeURIComponent(msg);
+}
+// patch applyLang so WhatsApp message also switches language
+var _origApply = applyLang;
+applyLang = function(l){ _origApply(l); updateWaBtn(); };
+
+</script>
+</body></html>

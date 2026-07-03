@@ -1,0 +1,383 @@
+<!doctype html>
+<html class="no-js" lang="en"> <!-- TT -->
+  <head>
+    <meta charset="utf-8">
+    <title>Personal Banking | MyBank Australia (Fictional Demo)</title> <!-- TT -->
+    <meta name="description" content="Personal banking page of MyBank, a fictional Australian bank website created as a student portfolio project."> <!-- TT -->
+    <meta name="keywords" content="fictional bank, web design portfolio, student project"> <!-- TT -->
+    <meta name="author" content="Tulay Tsambardas, tulaytsambardasdesign@gmail.com "> <!-- TT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="MyBank (Fictional Demo)">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/mybanklogo.png">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+  
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mybank_index.css"><!-- TT -->
+    <link rel="stylesheet" href="css/responsive.css"><!-- TT -->
+    <link rel="stylesheet" href="css/credit.css"><!-- TT designer credit + demo banner -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="theme-color" content="#fafafa">
+
+  </head>
+
+  <body>
+    <div class="demo-banner">Fictional website — created as a student portfolio project. All products and rates are invented.</div>
+    <div id="wrapper">
+      <!-- Header with external navigation links -->
+      <header>
+        <div class="topnav" id="myTopnav">
+          <a href="mybank_index.html"><img src="images/mybanklogo.png" alt="mybank logo" title="MyBank" style="height:100px;"></a>
+          <a href="mybank_personal.html">Personal</a>
+          <a href="mybank_homeloans.html">Home loans</a>
+          <a href="login.html" id="login">LogIn</a>
+        </div>
+      </header>
+        <!-- Second links for navigate to page sections on the same page m1, m2, m3, m4 -->
+      <nav>
+        <div class="navbar" style="background-color: #73ac7e;">
+          <a href="#m1">Banking tools</a>
+          <a href="#m2">Accounts</a>
+          <a href="#m3">Cards</a>
+          <a href="#m4">Support Services</a>
+        </div>
+      </nav>
+      <form>
+        <input type="text" placeholder="Search.." name="search2" id="myCheck" onmouseover="myFunction()">
+      </form>
+      
+      <!-- main section -->
+      <div class="overlap-container">
+        <div class="img-box">
+          <img src="images/mybank_personal/accounts.jpg" alt="Accounts" style="width:100%;">
+        </div>
+        <div class="overlap-box">
+          <div class="row3">
+            <div class="column">
+              <a href="#"><img src="images/mybank_personal/everyday.jpg" alt="everyday account" style="width:100%;">Everyday accounts</a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="images/mybank_personal/savings.jpg" alt="saving account" style="width:100%;">Savings accounts & Term Deposits</a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="images/mybank_personal/joint.png" alt="joint account" style="width:100%;">Joint accounts</a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="images/mybank_personal/personalloans.png" alt="car loans" style="width:100%;">Personal loans</a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="images/mybank_personal/buynowpaylater.jpg" alt="buynowpaylater" style="width:100%;">Buy now, pay later</a>
+            </div>
+            <div class="column">
+              <a href="#"><img src="images/mybank_personal/premier.png" alt="handshake image" style="width:100%;">Premier & Private</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="article">
+        <section>
+          <h2 id="m1" style="text-align: center;padding-top: 14px;">Banking tools, guidance & support</h2>
+          <div class="row3">
+            <div class="column">
+              <h3>Banking tools & calculators</h3>
+              <p>Work out your borrowing power, loan repayments and savings goals with our free online calculators — simple tools that help you plan before you commit.</p>
+              <a href="#" style="text-decoration: orange underline "><b>Tools & more..</b></a>
+              <a href="#" style="text-decoration: orange underline; margin-left:50px;"><b>Calculator</b></a>
+            </div>
+            <div class="column">
+              <h3>Tips to help improve your financial welbeing</h3>
+              <p>Practical guides on budgeting, reducing everyday costs and building an emergency fund, written in plain language for every stage of life.</p>
+              <a href="#" style="text-decoration: orange underline "><b>Tips</b></a>
+            </div>
+            <div class="column">
+              <h3>Product support & FAQs</h3>
+              <p>Find quick answers about accounts, cards and payments in our help centre, or compare products side by side to choose what suits you best.</p>
+              <a href="#" style="text-decoration: orange underline "><b>Discover MyBank products</b></a>
+            </div>
+            <div class="column">
+              <h3>Local events & webinars</h3>
+              <p>Join free community sessions on first home buying, scam awareness and retirement planning — in your local branch or online from home.</p>
+              <a href="#" style="text-decoration: orange underline "><b>Events</b></a>
+              <a href="#" style="text-decoration: orange underline; margin-left:50px;"><b>Webinars</b></a>            
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 id="m2" style="text-align:center;">Debit accounts</h2>
+          <div class="row3">
+            <div class="column" style="line-height: 2;">
+              <h3>Debit account interest 3.5% p/m </h3>
+              <p>
+                Bank your way, every day.
+              </p>
+              <p>Our everyday debit account comes with no monthly fees, unlimited electronic transactions and a Visa Debit card you can use worldwide. Earn bonus interest simply by depositing your salary and keeping your balance above $500 each month.</p>
+              <button>Contact Us</button>
+
+            </div>
+            <div class="column">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="images/mybank_personal/debit.jpg" alt="debit card" style="width:100%;">
+                  </div>
+                  <div class="flip-card-back">
+                    <img src="images/mybank_personal/debit.jpg" alt="debit card" style="width:100%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <p>
+                A card that works as hard as you do.
+              </p>
+              <p>
+                Tap and pay with your phone or watch, shop online safely with real-time fraud monitoring, and withdraw cash fee-free at over 3,000 ATMs across Australia. If your card is ever lost or stolen, lock it instantly in the app and order a replacement in seconds.
+              </p>
+              <p>
+                Open your account online in under ten minutes — all you need is your ID and an Australian residential address. Your digital card is ready to use straight away, while the physical card arrives within five business days.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <h2 style="text-align:center;">Saving accounts</h2>
+          <div class="row3">
+            <div class="column">
+              <img src="images/mybank_personal/saving2.jpg" alt="savings2" style="width:100%;">
+              <div class="sentence">
+                <p>
+                  Whether you are saving for a holiday, a home deposit or a rainy day, our savings accounts reward regular deposits with bonus interest. Set a goal in the app, automate your transfers, and watch your progress grow month by month.
+                </p>
+              </div>
+            </div>
+            <div class="column">
+              <h3>Retirement rates</h3>
+              <p>
+                Higher fixed rates for customers aged 55 and over, so your retirement savings keep working while you relax.
+              </p>
+
+              <hr>
+              <p>
+                Choose a term that suits your plans — from three months to five years — and lock in your rate from day one. Interest can be paid monthly into your everyday account to top up your income, or reinvested to grow your balance faster. There are no setup or account-keeping fees, and our retirement specialists can help you split your savings across terms so money is always available when you need it.
+              </p>
+              <ol>
+                <li>6-month term — 4.10% p.a.</li>
+                <li>12-month term — 4.45% p.a.</li>
+                <li>24-month term — 4.70% p.a.</li>
+              </ol>
+            </div>
+       
+            <div class="column">
+              <h3>All about you</h3>
+              <p>
+                Everyone saves differently. That is why our savings specialists take the time to understand your goals before recommending an account, a term deposit, or a mix of both.
+              </p>
+              <p>
+                Book a free savings review in any branch or by phone. We will look at how you spend, how much you can comfortably put aside, and which bonus-interest conditions you can realistically meet — then build a simple plan you can stick to. Review your plan any time in the app, and adjust your goals as life changes. No jargon, no pressure, just clear guidance.
+              </p>
+              <img src="images/mybank_personal/savings.png" alt="dolar picture" style="width:100%; margin-top: -200px;opacity: 0.2;">
+              <button>Contact us</button>
+            </div>
+            
+          </div>
+        </section>
+        <hr>
+        <section>
+          <h2 id="m3" style="text-align:center;">Credit card offers</h2>
+          <div class="row3">
+            <div class="column">
+              <h2>Cashback offers</h2>
+              <br>
+              <img src="images/mybank_personal/lowfee.jpg" alt="lowfee card" style="width: 200px; transform:rotate(-30deg);">
+              <img src="images/mybank_personal/interestcard.png" alt="lowfee card" style="width: 200px; transform:rotate(-30deg);">
+            </div>
+            <div class="column">
+              <h4><b>Low Fee credit card</b></h4>
+              <h5>$200 cashback to spend how you want</h5>
+              <p>Apply for a new Low Fee credit card and spend $1,000 on purchases within 90 days of card activation.#</p>
+              <h5><b>Limited offer</b></h5>
+              <p>Expires 28 February 2027</p>
+            </div>
+            <div class="column">
+              <h4><b>At a glance</b></h4>
+              <p>&#9679; $0 annual fee in the first year and subsequent years when you spend $1,0001</p>
+              <p>&#9679; 19.74% p.a. purchase interest rate</p>
+              <p>&#9679; Minimum credit limit of $500</p>
+              <h4><b>Trade-offs</b></h4>
+              <p>&#9679; You won't earn Awards points</p>
+              <p>&#9679; International travel insurance isn't included</p>
+              <p>&#9679; Higher interest rates on purchases compared to our Low Rate credit cards. May not be suitable if you only make minimum repayments over a prolonged period of time</p>
+              <p>&#9679; International transaction fees apply</p>
+            </div>
+            <div id="tellmemorebutton" class="column">
+              <button class="button button4" style="background-color:white; border: 3px solid orange;">Tell me more</button>
+              <button class="button button4">Apply now</button>
+            </div>
+          </div>
+          <div class="row3">
+            <div class="column">
+              <h2><b>Awards credit cards</b></h2>
+              <p>Earn points quickly when you use your MyBank Awards credit card for daily spending.</p>
+              <h4><b>Trade-offs</b></h4>
+              <p>&#11088; The Diamond and Ultimate card options have a higher annualised fee when compared to other Awards products. For the Ultimate card the fee is waived if spend criteria is met</p>
+              <p>&#11088; Higher interest rates on purchases compared to our Low Rate and Low Fee credit cards. May not be suitable if you only make minimum repayments over a prolonged period of time</p>
+              <p>&#11088; International transaction fees apply on Awards, Platinum and Diamond cards</p>
+              <p>&#11088; $10 p.a. additional cardholder fee on Awards. Platinum and Diamond cards</p>
+            </div>
+            <div class="column" style="border: 2px solid orange;">
+              <div class="column">
+                <img id="awards1" src="images/mybank_personal/awards1.png" alt="lowfee card" style="width: 200px; transform:rotate(-30deg);">
+                <h2><b>Awards credit cards</b></h2>
+                <p>&#11088; Earn 1 Awards point or 0.4 Qantas Points5 for every dollar spent using your Mastercard®6</p>
+                <p>&#11088; Earn up to 50,000 Awards points or 20,000 Qantas Points a year</p>
+                <p>&#11088; $59 annual fee</p>
+                <p>&#11088; 20.24% p.a. purchase interest rate</p>
+                <p id="minimump">&#11088; Minimum credit limit of $500</p>
+                <a href="#" style="text-decoration: orange underline;"><b>Tell me more ...</b></a>
+                <hr>
+                <h5>OFFER</h5>
+                <h3><b>50,000 MyBank Awards points</b></h3>
+                <p>Apply for a new Awards credit card by 28 February 2027 and spend $2,500 on eligible purchases within 90 days of activation.</p>
+                <button id="awards1button" class="button button4">Apply now</button>
+              </div>
+            </div>
+            <div class="column" style="border: 2px solid orange;">
+              <div class="column">
+                <img id="awards2" src="images/mybank_personal/awards2.jpg" alt="lowfee card" style="width: 200px; transform:rotate(-30deg);">
+                <h2><b>Awards credit cards</b></h2>
+                <p>&#11088; Earn 1 Awards point or 0.4 Qantas Points5 for every dollar spent using your Mastercard®6</p>
+                <p>&#11088; Earn up to 150,000 Awards points or 60,000 Qantas Points a year</p>
+                <p>&#11088; $249 annual fee</p>
+                <p>&#11088; 20.24% p.a. purchase interest rate</p>
+                <p>&#11088; Minimum credit limit of $6,000</p>
+                <a Id="extras" href="#" style="text-decoration: orange underline "><b>international travel insurance!</b></a>
+                <p id="handy">&#11088;Handy extras like</p>
+                <a href="#" style="text-decoration: orange underline "><b>Tell me more..</b></a> 
+                <hr>
+                <h5>OFFER</h5>
+                <h3><b>80,000 MyBank Awards points or 50,000 Qantas Points</b></h3>
+                <p>Apply for a new Platinum Awards credit card by 28 February 2027 and spend $4,000 on eligible purchases within 90 days of activation.</p>
+                <button class="button button4">Apply now</button>
+              </div>
+            </div>
+            
+          </div>
+        </section>
+        <section>
+          <hr>
+          <h2 id="m4" style="text-align: center; padding-top: 14px; padding-left: 40px;">Support Services</h2>
+          <div class="row3">
+            <div class="column">
+              <h3>Financial Support</h3>
+              <ul>
+                <li><a href="#">Financial hardship help</a></li>
+                <li><a href="#">Cost of living support</a></li>
+                <li><a href="#">Disaster relief assistance</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Customer Support</h3>
+              <ul>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="#">Security &amp; fraud protection</a></li>
+                <li><a href="#">Accessibility services</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Network</h3>
+              <ul>
+                <li><a href="#"><i class="fa fa-facebook-square" style="color:rgba(17, 89, 115, 0.815);font-size:20px"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square" style="color:rgba(17, 89, 115, 0.815);font-size:20px"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square" style="color:rgba(17, 89, 115, 0.815);font-size:20px"></i></a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>About</h3>
+              <ul>
+                <li><a href="mybank_aboutus.html">About us</a></li>
+                <li><a href="mybank_aboutus.html#m2">Careers</a></li>
+                <li><a href="mybank_aboutus.html#m3">Community</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <div class="row3">
+          <div class="column" style="font-size:12px;">
+            <div class="topnav" id="myfooternav">
+              <a href="mybank_index.html"><img src="images/mybanklogo.png" alt="mybank logo" title="MyBank logo" style="height:100px;"></a>
+              <a href="mybank_personal.html">Personal</a>
+              <a href="mybank_homeloans.html">Home loans</a>
+              <a href="mybank_aboutus.html">About us</a>
+            </div>
+          </div>
+          <div class="column" style="font-size: 12px;">
+              <p>We acknowledge the Traditional Owners of the land, the Wurundjeri Woi Wurrung and Bunurong peoples of the Kulin Nation and pay our respect to their Elders, past, present and emerging.</p>
+              <p>&copy;2022 MyBank of Australia ABN 49 494 494 494 AFSL and Australian credit licence 888888</p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Designer credit — TT -->
+      <div class="site-credit">
+        <p class="credit-monogram">TT</p>
+        <p class="credit-name">Tulay Tsambardas</p>
+        <p class="credit-role">Digital Designer</p>
+        <p class="credit-copy">&copy; 2026 All rights reserved.</p>
+        <p class="credit-note">MyBank is a fictional brand created for a student project. All products, rates and company details are invented for demonstration purposes only.</p>
+      </div>
+
+
+
+
+
+
+      <img class="open-button" onclick="openForm()" src="images/chat.png" alt="chat image">
+      <div class="chat-popup" id="myForm">
+        <form class="form-container" onsubmit="event.preventDefault(); alert('Demo only — no message is sent.'); closeForm();">
+          <h1>Chat</h1>
+        
+          <label for="msg"><b>Message</b></label>
+          <textarea id="msg" placeholder="Type message.." name="msg" required></textarea>
+        
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+
+
+    </div>
+
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myCheck").click();
+      }
+    </script>
+
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  
+</html>                                                                                                   

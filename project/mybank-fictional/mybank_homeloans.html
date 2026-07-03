@@ -1,0 +1,350 @@
+<!doctype html>
+<html class="no-js" lang="en"> <!-- TT -->
+  <head>
+    <meta charset="utf-8">
+    <title>Home Loans | MyBank Australia (Fictional Demo)</title> <!-- TT -->
+    <meta name="description" content="Home loans page of MyBank, a fictional Australian bank website created as a student portfolio project."> <!-- TT -->
+    <meta name="keywords" content="fictional bank, web design portfolio, student project"> <!-- TT -->
+    <meta name="author" content="Tulay Tsambardas, tulaytsambardasdesign@gmail.com "> <!-- TT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="MyBank (Fictional Demo)">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/mybanklogo.png">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+  
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mybank_index.css"><!-- TT -->
+    <link rel="stylesheet" href="css/responsive.css"><!-- TT -->
+    <link rel="stylesheet" href="css/credit.css"><!-- TT designer credit + demo banner -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="theme-color" content="#fafafa">
+   
+ 
+    <link rel="stylesheet" href="jquery-ui-1.13.2.custom/jquery-ui.css">
+    <link rel="stylesheet" href="jquery-ui-1.13.2.custom/jquery-ui.structure.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+      $( function() {
+        $( "#tabs" ).tabs();
+      } );
+    </script>
+
+  </head>
+  <body>
+    <div class="demo-banner">Fictional website — created as a student portfolio project. All products and rates are invented.</div>
+    <div id="wrapper">
+      <!-- Header with external navigation links -->
+      <header>
+        <div class="topnav" id="myTopnav">
+          <a href="mybank_index.html"><img src="images/mybanklogo.png" alt="mybank logo" title="MyBank" style="height:100px;"></a>
+          <a href="mybank_personal.html">Personal</a>
+          <a href="mybank_homeloans.html">Home loans</a>
+          <a href="login.html" id="login">LogIn</a>
+        </div>
+      </header>
+        <!-- Second links for navigate to page sections on the same page m1, m2, m3, m4 -->
+      <nav>
+        <div class="navbar" style="background-color: #73ac7e;">
+          <a href="#m1">Home buying</a>
+          <a href="#m2">Home loan support</a>
+
+          <a href="#m4">Support Services</a>
+        </div>
+      </nav>
+      <form>
+        <input type="text" placeholder="Search.." name="search2" id="myCheck" onmouseover="myFunction()">
+      </form>
+      
+      <div class="hero-image">
+        <div class="hero-text">
+            
+            <div class="searchbar">
+                <form class="example" style="margin:auto;max-width:300px">
+
+                </form> 
+            </div>
+        </div>
+      </div>
+      <hr>
+      <h2 id="m1" style="text-align: center;padding-top: 14px;"><b>Home buying</b></h2>
+      <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Choose your journey</a></li>
+          <li><a href="#tabs-2">Refinance your loan</a></li>
+          <li><a href="#tabs-3">Built or renovate</a></li>
+          <li><a href="#tabs-4">Calculators</a></li>
+        </ul>
+        <div id="tabs-1">
+          <div class="rowtabs">
+            <div class="columntabs">
+              <h3>My first home</h3>
+              <div class="containertabs">
+                <img src="images/mybank_homeloans/home.png" alt="first home buyers" class="image">
+                <div class="overlaytabs">
+                  <div class="texttabs">
+                    <h3>Save with our low Extra Home Loan rate</h3>
+                    <h2>&#128171;4.69%PA</h2>
+                    <button class="button button4" style="width:auto;">Book appointment</button>
+                  </div>
+                </div>
+              </div>
+              <p>Buying your first home? We guide you from your first savings goal to settlement day.</p>
+              <p>Get pre-approval in as little as 48 hours and know exactly what you can afford.</p>
+            </div>
+            <div class="columntabs">
+              <h3>My next home</h3>
+              <div class="containertabs">
+                <img src="images/mybank_homeloans/home2.png" alt="my next home" class="image">
+                <div class="overlaytabs">
+                  <div class="texttabs">
+                    <h3>Save with our low Extra Home Loan rate</h3>
+                    <h2>&#128171;4.69%PA</h2>
+                    <button class="button button4" style="width:auto;">Book appointment</button>
+                  </div>
+                </div>
+              </div>
+              <p>Upgrading, downsizing or relocating? Moving to your next home is easier when your finance is sorted early. We can help you understand your current equity, bridge the gap between selling and buying, and choose a loan that fits your new plans. Take your existing MyBank loan with you, or start fresh with a new rate — either way, your lending specialist manages the paperwork so you can focus on the move.</p>
+            </div>
+            <div class="columntabs">
+              <h3>Investment property</h3>
+              <div class="containertabs">
+                <img src="images/mybank_homeloans/home3.png" alt="investment property" class="image">
+                <div class="overlaytabs">
+                  <div class="texttabs">
+                    <h3>Save with our low Extra Home Loan rate</h3>
+                    <h2>&#128171;4.69%PA</h2>
+                    <button class="button button4" style="width:auto;">Book appointment</button>
+                  </div>
+                </div>
+              </div>
+              <p>Thinking about property investment? Our investment loans come with flexible interest-only options, offset accounts and detailed rental yield guidance. Whether it is your first investment property or an addition to your portfolio, our specialists help you structure the loan tax-effectively and plan for vacancies, rates and maintenance costs — so your investment stays a source of income, not stress.</p>
+            </div>
+          </div>
+        </div>
+        <div id="tabs-2">
+          <div class="rowtabs">
+            <div class="columntabs">
+              <h3>Refinance your loan and relax</h3>              
+              <img src="images/mybank_homeloans/holiday.png" alt="refinance your loan" class="image">
+              <p>Refinancing could lower your repayments and free up money for the things you love.</p>
+              <p>Compare your current rate with ours in minutes — switching may be simpler than you think.</p>
+            </div>
+            <div class="columntabs">
+              <h3>Already got a MyBank home loan?</h3>
+              <table>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Review your rate any time — no appointment needed.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Switch between fixed and variable rates with no switching fee.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Add an offset account to reduce the interest you pay.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Make extra repayments to pay your loan off sooner.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Redraw extra repayments if you need the money back.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Top up your loan for renovations or a new car.</td>
+                </tr>
+              </table>
+              <p>Your loan should keep up with your life. Book a free loan health check and we will look at your current rate, repayments and features, then show you exactly what you could save by adjusting your loan — no obligation, and most reviews take less than 30 minutes.</p>
+              <button class="button button4" style="width:auto;">Book appointment</button>
+            </div>
+            <div class="columntabs">
+              <h3>Switch your home loan to MyBank</h3>
+              <table>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>$0 establishment fee when you refinance to MyBank.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Competitive fixed and variable rates to choose from.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>We handle the paperwork with your current lender.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Most switches are completed within two to three weeks.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Optional offset account and free redraw included.</td>
+                </tr>
+                <tr>
+                  <td>&#9899;</td>
+                  <td>Dedicated lending specialist from start to finish.</td>
+                </tr>
+              </table>
+              <p>Bringing your home loan to MyBank is easier than most people expect. Start with a quick comparison of your current loan, and if the numbers work for you, we take care of the transfer from there — including talking to your current bank. You could be on a better rate within weeks.</p>
+              <button class="button button4" style="width:auto;">Book appointment</button>
+
+            </div>
+          </div>
+        </div>
+        <div id="tabs-3">
+          <h2 style="text-align:center">Construction loans</h2>
+          <div class="rowborder">
+            <div class="border">
+              <h3>The money is released in stages as construction progresses</h3>
+              <p>This is known as making progress payments. It helps to monitor the build and 	ensure you're only paying for completed work.</p>
+            </div>
+            <div class="border">
+              <h3>You only pay the interest on your loan until construction's done</h3>
+              <p>During the build, your repayments cover only the interest on the amount drawn down so far — not the full loan. This keeps your costs lower while you may also be paying rent or a mortgage elsewhere. Once construction is complete, the loan converts to normal principal-and-interest repayments. Your lending specialist will walk you through each progress payment stage, so you always know what has been paid to the builder and what comes next.</p>
+            </div>
+          </div>
+          <button class="button button4" style="width:auto;">Book appointment</button>
+        </div>
+        <div id="tabs-4">
+          <p>Good decisions start with good numbers. Our free calculators help you test your plans before you commit — try different deposit sizes, loan terms and interest rates, and see the results instantly.</p>
+          <h3>Home loan repayments calculator</h3>
+          <p>Enter a loan amount, term and interest rate to see your estimated weekly, fortnightly or monthly repayments. Compare principal-and-interest with interest-only, and see how extra repayments could shorten your loan and reduce the total interest you pay. When you find numbers that feel comfortable, book an appointment and we will turn your estimate into a real plan over a coffee.</p>
+          <img src="images/mybank_homeloans/coffee.jpg" alt="coffee" style="width:20%">
+          <button class="button button4" style="width:50%;margin-left:100px;">Book appointment</button>
+        </div>
+      </div>
+          
+      <div id="article">
+        <section>
+          <h2 id="m2" style="text-align: center;padding-top: 14px;">Supporting you with home loans for real life</h2>
+          <div class="row3">
+            <div class="column">
+              <h3> &#10024;Australia's most flexible home loan</h3>
+              <p>&#127969; Repay weekly, fortnightly or monthly — whatever suits your pay cycle.</p>
+              <p>&#127969; Offset account included &#10024; every dollar in it reduces your interest.</p>
+              <p>&#127969; Free unlimited extra repayments and redraw on variable loans.</p>
+              <p>&#127969; Pause or reduce repayments during approved life events, such as parental leave.</p>
+            </div>
+            <div class="column">
+              <h3>Support when you need it most:</h3>
+              <span style='font-size:100px;'>&#127803;</span>
+              <p>If illness, job loss or a natural disaster affects your ability to repay, our hardship team is here to help — with repayment pauses, adjusted schedules and one-on-one guidance until you are back on your feet.</p>
+              <button class="button button4">Book appointment</button>
+
+            </div>
+          </div>
+        </section>
+        <section>
+          <hr>
+          <h2 id="m4" style="text-align: center; padding-top: 14px; padding-left: 40px;">Support Services</h2>
+          <div class="row3">
+            <div class="column">
+              <h3>Financial Support</h3>
+              <ul>
+                <li><a href="#">Financial hardship help</a></li>
+                <li><a href="#">Cost of living support</a></li>
+                <li><a href="#">Disaster relief assistance</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Customer Support</h3>
+              <ul>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="#">Security &amp; fraud protection</a></li>
+                <li><a href="#">Accessibility services</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Network</h3>
+              <ul>
+                <li><a href="#"><i class="fa fa-facebook-square" style="color:rgba(17, 89, 115, 0.815);font-size:20px"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square" style="color:rgba(17, 89, 115, 0.815);font-size:20px"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square" style="color:rgba(17, 89, 115, 0.815);font-size:20px"></i></a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>About</h3>
+              <ul>
+                <li><a href="mybank_aboutus.html">About us</a></li>
+                <li><a href="mybank_aboutus.html#m2">Careers</a></li>
+                <li><a href="mybank_aboutus.html#m3">Community</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <div class="row3">
+          <div class="column" style="font-size:12px;">
+            <div class="topnav" id="myfooternav">
+              <a href="mybank_index.html"><img src="images/mybanklogo.png" alt="mybank logo" title="MyBank logo" style="height:100px;"></a>
+              <a href="mybank_personal.html">Personal</a>
+              <a href="mybank_homeloans.html">Home loans</a>
+              <a href="mybank_aboutus.html">About us</a>
+            </div>
+          </div>
+          <div class="column" style="font-size: 12px;">
+              <p>We acknowledge the Traditional Owners of the land, the Wurundjeri Woi Wurrung and Bunurong peoples of the Kulin Nation and pay our respect to their Elders, past, present and emerging.</p>
+              <p>&copy;2022 MyBank of Australia ABN 49 494 494 494 AFSL and Australian credit licence 888888</p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Designer credit — TT -->
+      <div class="site-credit">
+        <p class="credit-monogram">TT</p>
+        <p class="credit-name">Tulay Tsambardas</p>
+        <p class="credit-role">Digital Designer</p>
+        <p class="credit-copy">&copy; 2026 All rights reserved.</p>
+        <p class="credit-note">MyBank is a fictional brand created for a student project. All products, rates and company details are invented for demonstration purposes only.</p>
+      </div>
+
+
+      <img class="open-button" onclick="openForm()" src="images/chat.png" alt="chat image">
+      <div class="chat-popup" id="myForm">
+        <form class="form-container" onsubmit="event.preventDefault(); alert('Demo only — no message is sent.'); closeForm();">
+          <h1>Chat</h1>
+        
+          <label for="msg"><b>Message</b></label>
+          <textarea id="msg" placeholder="Type message.." name="msg" required></textarea>
+        
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+
+
+    </div>
+ 
+
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script>
+
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

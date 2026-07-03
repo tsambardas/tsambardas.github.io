@@ -1,0 +1,295 @@
+<!doctype html>
+<html class="no-js" lang="en"> <!-- TT -->
+  <head>
+    <meta charset="utf-8">
+    <title>Home | MyBank Australia (Fictional Demo)</title> <!-- TT -->
+    <meta name="description" content="Home page of MyBank, a fictional Australian bank website created as a student portfolio project."> <!-- TT -->
+    <meta name="keywords" content="fictional bank, web design portfolio, student project"> <!-- TT -->
+    <meta name="author" content="Tulay Tsambardas, tulaytsambardasdesign@gmail.com "> <!-- TT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="MyBank (Fictional Demo)">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="images/mybanklogo.png">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+  
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mybank_index.css"><!-- TT -->
+    <link rel="stylesheet" href="css/responsive.css"><!-- TT -->
+    <link rel="stylesheet" href="css/credit.css"><!-- TT designer credit + demo banner -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="theme-color" content="#fafafa">
+
+  </head>
+
+  <body>
+    <div class="demo-banner">Fictional website — created as a student portfolio project. All products and rates are invented.</div>
+    <div id="wrapper">
+      <!-- Header with external navigation links -->
+      <header>
+        <div class="topnav" id="myTopnav">
+          <a href="mybank_index.html"><img src="images/mybanklogo.png" alt="mybank logo" title="MyBank" style="height:100px;"></a>
+          <a href="mybank_personal.html">Personal</a>
+          <a href="mybank_homeloans.html">Home loans</a>
+          <a href="login.html" id="login">LogIn</a>
+        </div>
+      </header>
+        <!-- Second links for navigate to page sections on the same page m1, m2, m3, m4 -->
+      <nav>
+        <div class="navbar" style="background-color: #73ac7e;">
+          <a href="#m1">First Home Buyers</a>
+          <a href="#m2">Accounts</a>
+          <a href="#m3">Banking App</a>
+          <a href="#m4">Support Services</a>
+        </div>
+      </nav>
+      <form>
+        <input type="text" placeholder="Search.." name="search2" id="myCheck" onmouseover="myFunction()">
+      </form>
+  
+      <!-- Slideshow container -->
+      <div class="slideshow-container">
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/mybank_index/slide1.jpg"  alt="slide1 shows coins image" style="width:100%">
+          <div class="text">Working</div>
+        </div>
+            
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="images/mybank_index/slide2.jpg" alt="slide2 shows two heart image" style="width:100%">
+          <div class="text">together</div>
+        </div>
+            
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/mybank_index/slide3.png" alt="slide3 shows two elder people sits on the bench" style="width:100%">
+          <div class="text">at every stage of your life</div>
+        </div>
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>    
+      <!-- The dots/circles -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+      <!-- End of the Slideshow -->
+
+      <div id="article">
+        <!-- Section m1 first home buyers guide -->
+        <section>
+          <h2 id="m1">First Home Buyers Guide </h2>
+          <div class="row3">
+            <div class="column">
+              <img src="images/mybank_index/firsthomebuyers.png" alt="First home buyer guide" title="First home buyer guide" style="width: 100%;">
+            </div>
+            <div class="column">
+              <h2><b>3.4 &#37;</b></h2>
+              <h2><b>Interest</b></h2>
+              <hr>
+              <p>
+                Buying your first home is one of the biggest steps you will ever take. Our First Home Buyers Guide walks you through every stage, from saving a deposit to getting the keys.
+              </p>
+              <p>Fixed introductory rate of 3.4% p.a. for eligible first home buyers.</p>
+            </div>
+            <div class="column">
+              <h2>How we help you get started</h2>
+              <hr>
+              <p>
+                Our home lending specialists explain how much you could borrow, what your repayments might look like, and which government grants and schemes you may qualify for as a first home buyer.
+              </p>
+              <p>
+                Start with a free 30-minute appointment at your nearest branch, by phone, or by video call. We will help you understand your deposit options, pre-approval, and the costs involved in buying — such as stamp duty, inspections and legal fees — so there are no surprises on settlement day. When you are ready, your dedicated lender stays with you through the whole application, and our guide keeps you on track with a simple step-by-step checklist you can follow at your own pace.
+              </p>
+                <!-- Javascript button link to enquiry form -->
+              <a id="contactus" type="button" href="contact.html">Contact us</a>
+              
+            </div>
+          </div>
+        </section>
+        <!-- Section m2 -->
+        <section>
+          <hr>
+          <h2 id="m2" style="text-align: center;padding-top: 14px;">Accounts</h2>
+          <div class="row3">
+            <div class="column">
+              <h3>Personal</h3>
+              <p>Everyday banking made simple, with no monthly account fees.</p>
+              <ul>
+                <li>Everyday accounts <span style="float:right;font-size: 20px;">&#8811;</span></li>
+                <li>Savings accounts<span style="float:right;font-size: 20px;">&#8811;</span></li>
+                <li>Term deposits<span style="float:right;font-size: 20px;">&#8811;</span></li>
+                <li>Joint accounts<span style="float:right;font-size: 20px;">&#8811;</span></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Loans</h3>
+              <p>Flexible lending options to match your plans and budget.</p>
+              <ul>
+                <li>Home loans<span style="float:right;font-size: 20px;">&#8811;</span></li>
+                <li>Personal loans<span style="float:right;font-size: 20px;">&#8811;</span></li>
+                <li>Car loans<span style="float:right;font-size: 20px;">&#8811;</span></li>
+                <li>Buy now, pay later<span style="float:right;font-size: 20px;">&#8811;</span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- Section m3 -->
+        <section>
+          <h2 id="m3" style="text-align: center;padding-top: 14px;">Mobile app</h2>
+          <div class="row3">
+            <div class="column">
+              <h2>Access your money anytime, anywhere</h2>
+              <h3>Australia's #1 banking app</h3>
+              <p>With the MyBank app, you'll have access to a range of features to help you manage your money:</p>
+              <p>&#9989; Check balances and transactions in real time.</p>
+              <p>&#9989; Pay bills and transfer money in a few taps.</p>
+              <p>&#9989; Set savings goals and track your progress.</p>
+              <p>&#9989; Lock, block or replace a lost card instantly.</p>
+              <p>&#9989; Get instant alerts for unusual activity.</p>
+              <p>&#9989; Log in securely with fingerprint or face recognition, and reach our support team without leaving the app.</p>
+              <a href="#" style="text-decoration: orange underline "><b>Discover more about the MyBank mobile app</b></a>
+            </div>
+            <div class="column">
+              <img src="images/mybank_index/mobileapp.png" alt="mobile app image" style="width:100%">
+             </div>
+          </div>
+        </section>
+        <section>
+          <hr>
+          <h2 id="m4" style="text-align: center; padding-top: 14px; padding-left: 40px;">Support Services</h2>
+          <div class="row3">
+            <div class="column">
+              <h3>Financial Support</h3>
+              <ul>
+                <li><a href="#">Financial hardship help</a></li>
+                <li><a href="#">Cost of living support</a></li>
+                <li><a href="#">Disaster relief assistance</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Customer Support</h3>
+              <ul>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="#">Security &amp; fraud protection</a></li>
+                <li><a href="#">Accessibility services</a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Network</h3>
+              <ul>
+                <li><a href="#"><i class="fa fa-facebook-square" style="color:rgba(17, 89, 115, 0.815);font-size:20px"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter-square" style="color:rgba(17, 89, 115, 0.815);font-size:20px"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin-square" style="color:rgba(17, 89, 115, 0.815);font-size:20px"></i></a></li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>About</h3>
+              <ul>
+                <li><a href="mybank_aboutus.html">About us</a></li>
+                <li><a href="mybank_aboutus.html#m2">Careers</a></li>
+                <li><a href="mybank_aboutus.html#m3">Community</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <div class="row3">
+          <div class="column" style="font-size:12px;">
+            <div class="topnav" id="myfooternav">
+              <a href="mybank_index.html"><img src="images/mybanklogo.png" alt="mybank logo" title="MyBank logo" style="height:100px;"></a>
+              <a href="mybank_personal.html">Personal</a>
+              <a href="mybank_homeloans.html">Home loans</a>
+              <a href="mybank_aboutus.html">About us</a>
+            </div>
+          </div>
+          <div class="column" style="font-size: 12px;">
+              <p>We acknowledge the Traditional Owners of the land, the Wurundjeri Woi Wurrung and Bunurong peoples of the Kulin Nation and pay our respect to their Elders, past, present and emerging.</p>
+              <p>&copy;2022 MyBank of Australia ABN 49 494 494 494 AFSL and Australian credit licence 888888</p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Designer credit — TT -->
+      <div class="site-credit">
+        <p class="credit-monogram">TT</p>
+        <p class="credit-name">Tulay Tsambardas</p>
+        <p class="credit-role">Digital Designer</p>
+        <p class="credit-copy">&copy; 2026 All rights reserved.</p>
+        <p class="credit-note">MyBank is a fictional brand created for a student project. All products, rates and company details are invented for demonstration purposes only.</p>
+      </div>
+
+
+
+      <img class="open-button" onclick="openForm()" src="images/chat.png" alt="chat image">
+      <div class="chat-popup" id="myForm">
+        <form class="form-container" onsubmit="event.preventDefault(); alert('Demo only — no message is sent.'); closeForm();">
+          <h1>Chat</h1>
+        
+          <label for="msg"><b>Message</b></label>
+          <textarea id="msg" placeholder="Type message.." name="msg" required></textarea>
+        
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+
+
+    </div>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+      
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+      </script>
+
+    <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myCheck").click();
+      }
+    </script>
+
+    <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  
+</html>                                          

@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Evergreen Learning Studio — Brand Guidelines</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,ital,wght@9..144,0,400;9..144,0,600;9..144,0,700;9..144,1,400&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --g900:#143A2E;--g800:#1B4537;--g700:#275746;--g100:#E3ECE3;--g50:#EEF3EC;
+  --amber:#D29239;--a-soft:#F1E2C5;
+  --ink:#1A2A22;--muted:#56655C;--paper:#F7F3EA;--p2:#FCFAF4;
+  --surface:#FFFFFF;--line:#E2DDCD;--lg:#D4DED3;
+  --red:#C0392B;--red-s:#FDECEA;--radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:"Figtree",system-ui,sans-serif;font-size:16px;line-height:1.7;background:var(--paper);color:var(--ink);}
+h1,h2,h3,h4{font-family:"Fraunces",Georgia,serif;font-weight:600;line-height:1.15;}
+a{color:var(--g800);text-underline-offset:3px;}code{font-family:"JetBrains Mono",monospace;font-size:.86em;background:var(--g50);border:1px solid var(--lg);border-radius:5px;padding:1px 6px;}
+.layout{display:grid;grid-template-columns:220px 1fr;min-height:100vh;}
+/* SIDEBAR */
+.sb{background:var(--g900);color:#F4EEE2;padding:24px 18px;position:sticky;top:0;height:100vh;overflow-y:auto;}
+.sb .brand{font-family:"Fraunces",serif;font-size:1rem;color:var(--amber);margin-bottom:4px;}
+.sb .sub{font-size:.74rem;color:rgba(244,238,226,.55);margin-bottom:22px;}
+.sb a{color:rgba(244,238,226,.72);text-decoration:none;font-size:.85rem;padding:7px 9px;border-radius:7px;transition:background .14s;display:block;}
+.sb a:hover{background:rgba(244,238,226,.1);color:#F4EEE2;}
+.sb .sl{font-size:.67rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(244,238,226,.38);padding:12px 9px 4px;}
+/* MAIN */
+.mn{padding:44px 52px;max-width:760px;}
+/* PAGE HEADER */
+.ph{margin-bottom:44px;padding:36px 36px;background:var(--g900);border-radius:20px;color:#F4EEE2;}
+.ph .ey{font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:8px;}
+.ph h1{font-size:2rem;color:#FBF6EC;margin-bottom:10px;}
+.ph p{font-size:.95rem;color:rgba(244,238,226,.78);max-width:52ch;}
+/* SECTIONS */
+.ds{margin-bottom:52px;}
+.ds h2{font-size:1.45rem;color:var(--g900);margin-bottom:16px;padding-bottom:10px;border-bottom:1.5px solid var(--lg);}
+.ds h3{font-size:1.05rem;color:var(--g800);margin:20px 0 9px;}
+.ds p{color:var(--muted);margin-bottom:10px;font-size:.96rem;}
+/* LOGO DISPLAY */
+.logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.logo-tile{border-radius:var(--radius);overflow:hidden;border:1px solid var(--lg);}
+.logo-tile.light{background:var(--paper);padding:28px;display:flex;flex-direction:column;align-items:center;gap:10px;}
+.logo-tile.dark{background:var(--g900);padding:28px;display:flex;flex-direction:column;align-items:center;gap:10px;}
+.logo-tile .lt{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.logo-tile.dark .lt{color:rgba(244,238,226,.5);}
+.logo-tile svg{max-width:100%;height:auto;}
+/* COLOUR SYSTEM */
+.colour-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.cswatch{border-radius:var(--radius);overflow:hidden;border:1px solid var(--lg);}
+.cswatch .cbg{height:80px;}
+.cswatch .cinfo{padding:12px 14px;}
+.cswatch .cname{font-weight:700;font-size:.95rem;margin-bottom:2px;}
+.cswatch .chex{font-family:"JetBrains Mono",monospace;font-size:.82rem;color:var(--muted);margin-bottom:4px;}
+.cswatch .cuse{font-size:.82rem;color:var(--muted);}
+.contrast-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
+.ct-pair{border-radius:10px;padding:14px 16px;font-size:.88rem;font-weight:600;border:1px solid transparent;}
+.ct-pass{border-color:var(--lg);}
+.ct-fail{border-color:#FBB;background:#FFF5F5;}
+.ct-badge{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-top:4px;}
+.aaa{background:#C8F0D4;color:#0A4D21;}
+.aa{background:#D4E8FB;color:#1B4D8E;}
+.fail-b{background:#FBBDBD;color:#7B1010;}
+/* TYPOGRAPHY */
+.type-sample{border:1px solid var(--lg);border-radius:var(--radius);overflow:hidden;margin-bottom:12px;}
+.type-meta{background:var(--g50);padding:10px 16px;font-size:.8rem;color:var(--muted);border-bottom:1px solid var(--lg);font-family:"JetBrains Mono",monospace;}
+.type-preview{padding:20px 22px;}
+.type-preview.dark{background:var(--g900);}
+/* USAGE RULES */
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.rule-card{border-radius:var(--radius);padding:18px 20px;border:2px solid transparent;}
+.rule-do{background:#F0FBF0;border-color:#A8D8A8;}
+.rule-do h4{color:#145A32;margin-bottom:8px;}
+.rule-dont{background:var(--red-s);border-color:#F0AAAA;}
+.rule-dont h4{color:var(--red);margin-bottom:8px;}
+.rule-card ul{padding-left:18px;font-size:.9rem;color:var(--muted);}
+.rule-card li{margin-bottom:4px;}
+/* SPACING */
+.space-demo{display:flex;align-items:flex-end;gap:8px;flex-wrap:wrap;margin-top:12px;}
+.sp{background:var(--amber);opacity:.7;border-radius:3px;}
+/* FILE TABLE */
+table{width:100%;border-collapse:collapse;font-size:.9rem;margin-bottom:14px;}
+th{background:var(--g900);color:#F4EEE2;padding:9px 13px;text-align:left;font-weight:600;}
+td{padding:9px 13px;border-bottom:1px solid var(--lg);vertical-align:top;}
+tr:nth-child(even) td{background:var(--g50);}
+/* LINKS */
+.link-g{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.lc{background:var(--surface);border:1px solid var(--lg);border-radius:10px;padding:12px 14px;text-decoration:none;display:block;transition:transform .15s;}
+.lc:hover{transform:translateY(-2px);}
+.lc .lcat{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:3px;}
+.lc .ltt{font-size:.92rem;font-weight:600;color:var(--g800);}
+.lc .luu{font-size:.78rem;color:var(--muted);}
+/* RESPONSIVE */
+@media(max-width:760px){
+  .layout{grid-template-columns:1fr;}
+  .sb{position:static;height:auto;}
+  .mn{padding:24px 18px;}
+  .logo-grid,.colour-grid,.contrast-row,.rules-grid,.link-g{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<!-- SIDEBAR -->
+<aside class="sb">
+  <div class="brand">Evergreen Learning Studio</div>
+  <div class="sub">Brand Guidelines v1.0</div>
+  <nav>
+    <span class="sl">Identity</span>
+    <a href="#foundation">Brand Foundation</a>
+    <a href="#logo">Logo System</a>
+    <span class="sl">Visual Language</span>
+    <a href="#colour">Colour Palette</a>
+    <a href="#typography">Typography</a>
+    <a href="#spacing">Spacing &amp; Grid</a>
+    <span class="sl">Usage</span>
+    <a href="#rules">Usage Rules</a>
+    <a href="#illustrator">Illustrator Guide</a>
+    <a href="#files">File Inventory</a>
+    <span class="sl">Compliance</span>
+    <a href="#wcag-ref">WCAG 2.2 Reference</a>
+    <a href="#links">External Links</a>
+  </nav>
+</aside>
+
+<!-- MAIN -->
+<main class="mn">
+
+  <div class="ph">
+    <p class="ey">Brand Guidelines</p>
+    <h1>Evergreen Learning Studio</h1>
+    <p>Complete visual identity system — logo, colour, typography, and usage rules. Read this document before designing any material for this brand.</p>
+  </div>
+
+  <!-- 1. FOUNDATION -->
+  <section class="ds" id="foundation">
+    <h2>1. Brand Foundation</h2>
+
+    <h3>Mission Statement</h3>
+    <p style="font-family:'Fraunces',serif;font-size:1.2rem;color:var(--g900);font-style:italic;border-left:3px solid var(--amber);padding-left:16px;margin:12px 0 20px;">"Every learner deserves support, clarity, and confidence." — So every child feels successful, safe, and valued.</p>
+
+    <h3>Brand Personality</h3>
+    <table>
+      <tr><th>Attribute</th><th>In Practice</th></tr>
+      <tr><td><strong>Warm Authority</strong></td><td>Premium educational support brand that communicates with warmth, clarity, and professional structure</td></tr>
+      <tr><td><strong>Trustworthy</strong></td><td>Every design choice signals reliability: dark greens, structured layouts, clear information</td></tr>
+      <tr><td><strong>Nurturing</strong></td><td>Amber warmth, organic curves, growth imagery — not cold or corporate</td></tr>
+      <tr><td><strong>Professional</strong></td><td>Clean typography, proper spacing, legal compliance — serious about her craft</td></tr>
+    </table>
+
+    <h3>Brand Voice</h3>
+    <ul>
+      <li>Speaks <strong>directly and clearly</strong> — no jargon that parents don't understand</li>
+      <li>Uses <strong>first person</strong> — "I prepare", "I work with", "my approach"</li>
+      <li><strong>Turkish first</strong>, English second — never switches mid-sentence</li>
+      <li>Avoids pity language about children with special needs — uses <strong>strength-based language</strong></li>
+    </ul>
+
+    <h3>Target Audience</h3>
+    <ul>
+      <li>Parents and guardians seeking structured special education support</li>
+      <li>Parents seeking private supplementary support outside of school hours</li>
+      <li>School administrators and rehabilitation centres (secondary audience)</li>
+      <li>Geographic focus: Örnek Şehir — Türkiye and surrounding areas</li>
+    </ul>
+  </section>
+
+  <!-- 2. LOGO SYSTEM -->
+  <section class="ds" id="logo">
+    <h2>2. Logo System</h2>
+
+    <h3>Icon Mark — The Growth Sprout</h3>
+    <p>The icon is a stylised sprout growing upward within a dark green circle. It represents the core of the brand's work: supporting every learner's individual potential. Two leaves at different heights suggest both the student and the teacher growing together.</p>
+
+    <div class="logo-grid">
+      <div class="logo-tile light">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="80" height="80" role="img" aria-label="Evergreen Learning Studio icon">
+          <circle cx="24" cy="24" r="24" fill="#143A2E"/>
+          <line x1="24" y1="37" x2="24" y2="18" stroke="#D29239" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M24 29 C20 27 13 22 15 14 C19 18 23 24 24 29Z" fill="#D29239"/>
+          <path d="M24 23 C28 18 34 12 30 7 C25 11 23 17 24 23Z" fill="#D29239"/>
+        </svg>
+        <span class="lt">Icon — Light Background</span>
+      </div>
+      <div class="logo-tile dark">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="80" height="80" role="img" aria-label="Evergreen Learning Studio icon reversed">
+          <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.08)" stroke="#D29239" stroke-width="1.5"/>
+          <line x1="24" y1="37" x2="24" y2="18" stroke="#D29239" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M24 29 C20 27 13 22 15 14 C19 18 23 24 24 29Z" fill="#D29239"/>
+          <path d="M24 23 C28 18 34 12 30 7 C25 11 23 17 24 23Z" fill="#D29239"/>
+        </svg>
+        <span class="lt">Icon — Dark Background</span>
+      </div>
+    </div>
+
+    <h3>Primary Logo — Horizontal</h3>
+    <div class="logo-tile light" style="align-items:flex-start;margin-bottom:14px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 56" width="430" height="56" role="img" aria-label="Evergreen Learning Studio primary logo">
+        <g transform="translate(0,4)">
+          <circle cx="24" cy="24" r="24" fill="#143A2E"/>
+          <line x1="24" y1="37" x2="24" y2="18" stroke="#D29239" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M24 29 C20 27 13 22 15 14 C19 18 23 24 24 29Z" fill="#D29239"/>
+          <path d="M24 23 C28 18 34 12 30 7 C25 11 23 17 24 23Z" fill="#D29239"/>
+        </g>
+        <text x="60" y="29" font-family="Fraunces, Georgia, serif" font-size="23" font-weight="600" fill="#143A2E" letter-spacing="-0.3">Evergreen Learning Studio</text>
+        <text x="61" y="46" font-family="Figtree, system-ui, sans-serif" font-size="10" font-weight="500" fill="#56655C" letter-spacing="0.8">SPECIAL EDUCATION SUPPORT STUDIO</text>
+      </svg>
+      <span class="lt">Primary — Light Background · Use: website, letterhead, email signature</span>
+    </div>
+
+    <h3>Primary Logo — Reversed (Dark Background)</h3>
+    <div class="logo-tile dark" style="align-items:flex-start;margin-bottom:14px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 56" width="390" height="52" role="img" aria-label="Evergreen Learning Studio reversed logo">
+        <g transform="translate(0,4)">
+          <circle cx="24" cy="24" r="24" fill="rgba(255,255,255,0.08)" stroke="#D29239" stroke-width="1.5"/>
+          <line x1="24" y1="37" x2="24" y2="18" stroke="#D29239" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M24 29 C20 27 13 22 15 14 C19 18 23 24 24 29Z" fill="#D29239"/>
+          <path d="M24 23 C28 18 34 12 30 7 C25 11 23 17 24 23Z" fill="#D29239"/>
+        </g>
+        <text x="60" y="29" font-family="Fraunces, Georgia, serif" font-size="23" font-weight="600" fill="#F4EEE2" letter-spacing="-0.3">Evergreen Learning Studio</text>
+        <text x="61" y="46" font-family="Figtree, system-ui, sans-serif" font-size="10" font-weight="500" fill="rgba(244,238,226,0.7)" letter-spacing="0.8">SPECIAL EDUCATION SUPPORT STUDIO</text>
+      </svg>
+      <span class="lt">Reversed — Dark Background · Use: hero sections, dark slides, print on dark paper</span>
+    </div>
+
+    <h3>Stacked Logo</h3>
+    <div class="logo-tile light" style="margin-bottom:14px;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 108" width="240" height="108" role="img" aria-label="Evergreen Learning Studio stacked logo">
+        <g transform="translate(96,0)">
+          <circle cx="24" cy="24" r="24" fill="#143A2E"/>
+          <line x1="24" y1="37" x2="24" y2="18" stroke="#D29239" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M24 29 C20 27 13 22 15 14 C19 18 23 24 24 29Z" fill="#D29239"/>
+          <path d="M24 23 C28 18 34 12 30 7 C25 11 23 17 24 23Z" fill="#D29239"/>
+        </g>
+        <text x="120" y="70" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-size="22" font-weight="600" fill="#143A2E" letter-spacing="-0.3">Evergreen Learning Studio</text>
+        <text x="120" y="86" text-anchor="middle" font-family="Figtree, system-ui, sans-serif" font-size="8.5" font-weight="500" fill="#56655C" letter-spacing="0.7">SPECIAL EDUCATION</text>
+        <text x="120" y="98" text-anchor="middle" font-family="Figtree, system-ui, sans-serif" font-size="8.5" font-weight="500" fill="#56655C" letter-spacing="0.7">SUPPORT</text>
+      </svg>
+      <span class="lt">Stacked — Use: business card, social profile photo, square spaces</span>
+    </div>
+
+    <h3>Clear Space Rule</h3>
+    <p>Always surround the logo with a minimum clear space equal to the height of the letter "Z" in the wordmark (approximately the icon radius — 24px at standard size). No other text, images, or decorative elements inside this zone.</p>
+    <div style="display:inline-flex;align-items:center;justify-content:center;border:2px dashed var(--amber);padding:24px;border-radius:10px;background:var(--g50);margin:8px 0;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+        <circle cx="24" cy="24" r="24" fill="#143A2E"/>
+        <line x1="24" y1="37" x2="24" y2="18" stroke="#D29239" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M24 29 C20 27 13 22 15 14 C19 18 23 24 24 29Z" fill="#D29239"/>
+        <path d="M24 23 C28 18 34 12 30 7 C25 11 23 17 24 23Z" fill="#D29239"/>
+      </svg>
+    </div>
+    <p style="font-size:.84rem;color:var(--muted);margin-top:6px;">Dashed border = minimum clear space zone. Keep all other elements outside.</p>
+
+    <h3>Minimum Sizes</h3>
+    <table>
+      <tr><th>Use</th><th>Minimum size</th><th>Version to use</th></tr>
+      <tr><td>Digital — icon only</td><td>24 × 24 px</td><td>01-icon-only.svg</td></tr>
+      <tr><td>Digital — full logo</td><td>200 px wide</td><td>02-logo-primary-horizontal.svg</td></tr>
+      <tr><td>Print — icon only</td><td>8 mm</td><td>01-icon-only.svg (exported at 300dpi)</td></tr>
+      <tr><td>Print — full logo</td><td>55 mm wide</td><td>02-logo-primary-horizontal.svg</td></tr>
+      <tr><td>Business card</td><td>Use stacked, min 28 mm wide</td><td>03-logo-primary-stacked.svg</td></tr>
+    </table>
+  </section>
+
+  <!-- 3. COLOUR -->
+  <section class="ds" id="colour">
+    <h2>3. Colour Palette</h2>
+    <p>The palette is built on forest green and warm amber. <strong>Critical rule:</strong> amber (#D29239) must never be used as small body text on white — it fails WCAG contrast. Use amber only for decorative elements, large headings (≥18pt), and non-text UI elements.</p>
+
+    <div class="colour-grid">
+      <div class="cswatch">
+        <div class="cbg" style="background:#143A2E;"></div>
+        <div class="cinfo">
+          <div class="cname">Forest Green 900</div>
+          <div class="chex">HEX #143A2E · RGB 20, 58, 46</div>
+          <div class="chex">CMYK 66, 0, 21, 77</div>
+          <div class="cuse">Primary: hero bg, icon circle, headings, nav</div>
+        </div>
+      </div>
+      <div class="cswatch">
+        <div class="cbg" style="background:#1B4537;"></div>
+        <div class="cinfo">
+          <div class="cname">Forest Green 800</div>
+          <div class="chex">HEX #1B4537 · RGB 27, 69, 55</div>
+          <div class="chex">CMYK 61, 0, 20, 73</div>
+          <div class="cuse">Secondary: footer, interactive states, sidebar</div>
+        </div>
+      </div>
+      <div class="cswatch">
+        <div class="cbg" style="background:#275746;"></div>
+        <div class="cinfo">
+          <div class="cname">Forest Green 700</div>
+          <div class="chex">HEX #275746 · RGB 39, 87, 70</div>
+          <div class="chex">CMYK 55, 0, 20, 66</div>
+          <div class="cuse">Tertiary: links, organisation names, labels</div>
+        </div>
+      </div>
+      <div class="cswatch">
+        <div class="cbg" style="background:#D29239;"></div>
+        <div class="cinfo">
+          <div class="cname">Warm Amber</div>
+          <div class="chex">HEX #D29239 · RGB 210, 146, 57</div>
+          <div class="chex">CMYK 0, 30, 73, 18</div>
+          <div class="cuse">Accent: buttons, eyebrow text, icon details, highlights — DECORATIVE ONLY on white</div>
+        </div>
+      </div>
+      <div class="cswatch">
+        <div class="cbg" style="background:#F7F3EA;border:1px solid #E2DDCD;"></div>
+        <div class="cinfo">
+          <div class="cname">Warm Paper</div>
+          <div class="chex">HEX #F7F3EA · RGB 247, 243, 234</div>
+          <div class="chex">CMYK 0, 2, 5, 3</div>
+          <div class="cuse">Page background — warmer than white, reduces eye strain</div>
+        </div>
+      </div>
+      <div class="cswatch">
+        <div class="cbg" style="background:#1A2A22;"></div>
+        <div class="cinfo">
+          <div class="cname">Ink (Body Text)</div>
+          <div class="chex">HEX #1A2A22 · RGB 26, 42, 34</div>
+          <div class="chex">CMYK 38, 0, 19, 84</div>
+          <div class="cuse">Body text — green-tinted near-black, warmer than pure black</div>
+        </div>
+      </div>
+      <div class="cswatch">
+        <div class="cbg" style="background:#56655C;"></div>
+        <div class="cinfo">
+          <div class="cname">Muted Green</div>
+          <div class="chex">HEX #56655C · RGB 86, 101, 92</div>
+          <div class="chex">CMYK 15, 0, 9, 60</div>
+          <div class="cuse">Secondary text, captions, metadata, muted labels</div>
+        </div>
+      </div>
+      <div class="cswatch">
+        <div class="cbg" style="background:#F1E2C5;"></div>
+        <div class="cinfo">
+          <div class="cname">Amber Soft</div>
+          <div class="chex">HEX #F1E2C5 · RGB 241, 226, 197</div>
+          <div class="chex">CMYK 0, 6, 18, 5</div>
+          <div class="cuse">Light tints: badge backgrounds, note boxes, highlights</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Contrast Ratios (WCAG 2.2)</h3>
+    <div class="contrast-row">
+      <div class="ct-pair ct-pass" style="background:#F7F3EA;color:#143A2E;">
+        Ink on Paper<br><span class="ct-badge aaa">12.1:1 — AAA ✅</span>
+      </div>
+      <div class="ct-pair ct-pass" style="background:#143A2E;color:#F4EEE2;">
+        Cream on Dark Green<br><span class="ct-badge aaa">10.9:1 — AAA ✅</span>
+      </div>
+      <div class="ct-pair ct-pass" style="background:#D29239;color:#221603;">
+        Dark Text on Amber<br><span class="ct-badge aa">6.9:1 — AA ✅</span>
+      </div>
+      <div class="ct-pair ct-fail" style="background:#FFFFFF;color:#D29239;">
+        Amber Text on White<br><span class="ct-badge fail-b">2.7:1 — FAILS ⛔</span><br><small style="font-size:.76rem;font-weight:400;color:var(--red);">Decorative use only. Never for body text.</small>
+      </div>
+      <div class="ct-pair ct-pass" style="background:#143A2E;color:#D29239;">
+        Amber on Dark Green<br><span class="ct-badge aa">4.7:1 — AA ✅</span>
+      </div>
+      <div class="ct-pair ct-pass" style="background:#F7F3EA;color:#1A2A22;">
+        Body Text on Paper<br><span class="ct-badge aaa">13.8:1 — AAA ✅</span>
+      </div>
+    </div>
+    <p style="margin-top:14px;font-size:.88rem;color:var(--muted);">Verify any new colour combination at: <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener">webaim.org/resources/contrastchecker/</a></p>
+  </section>
+
+  <!-- 4. TYPOGRAPHY -->
+  <section class="ds" id="typography">
+    <h2>4. Typography</h2>
+    <p>Two typefaces only. Install both in Illustrator from Google Fonts before designing any materials.</p>
+    <p>Download: <a href="https://fonts.google.com/specimen/Fraunces" target="_blank" rel="noopener">Fraunces</a> · <a href="https://fonts.google.com/specimen/Figtree" target="_blank" rel="noopener">Figtree</a></p>
+
+    <h3>Fraunces — Heading Typeface</h3>
+    <p>Optical-size serif. Warm, authoritative, distinctive. Use for all headings, the name in the logo, and display text. Variable font — uses optical size axis (<code>opsz</code>) for best rendering at each size.</p>
+
+    <div class="type-sample">
+      <div class="type-meta">Fraunces · weight 700 · ~40px · Page titles</div>
+      <div class="type-preview"><span style="font-family:Fraunces,Georgia,serif;font-size:2.4rem;font-weight:700;color:#143A2E;">Evergreen Learning Studio</span></div>
+    </div>
+    <div class="type-sample">
+      <div class="type-meta">Fraunces · weight 600 · ~24px · Section headings</div>
+      <div class="type-preview"><span style="font-family:Fraunces,Georgia,serif;font-size:1.5rem;font-weight:600;color:#143A2E;">Individual Education Plan</span></div>
+    </div>
+    <div class="type-sample">
+      <div class="type-meta">Fraunces · weight 400 italic · ~18px · Quotes and callouts</div>
+      <div class="type-preview"><span style="font-family:Fraunces,Georgia,serif;font-size:1.12rem;font-weight:400;font-style:italic;color:#143A2E;">"Every learner deserves support, clarity, and confidence."</span></div>
+    </div>
+
+    <h3>Figtree — Body Typeface</h3>
+    <p>Rounded geometric sans-serif. Highly readable at small sizes. Clean, modern, friendly. Use for all body text, labels, UI text, captions, and the tagline in the logo.</p>
+
+    <div class="type-sample">
+      <div class="type-meta">Figtree · weight 500 · 11px · ALL CAPS · Eyebrow labels</div>
+      <div class="type-preview"><span style="font-family:Figtree,sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#D29239;">SPECIAL EDUCATION SUPPORT STUDIO</span></div>
+    </div>
+    <div class="type-sample">
+      <div class="type-meta">Figtree · weight 400 · 17px · Body text</div>
+      <div class="type-preview"><span style="font-family:Figtree,sans-serif;font-size:1.06rem;font-weight:400;color:#56655C;line-height:1.7;">Otizm spektrum bozukluğu, Down sendromu ve öğrenme güçlüğü olan öğrencilerle birebir eğitim çalışmaları yürüttü.</span></div>
+    </div>
+    <div class="type-sample">
+      <div class="type-meta">Figtree · weight 700 · 15px · Bold / CTA</div>
+      <div class="type-preview"><span style="font-family:Figtree,sans-serif;font-size:.95rem;font-weight:700;color:#1A2A22;">Randevu Al · Örnek CV İndir · Mesaj Gönder</span></div>
+    </div>
+
+    <h3>Typography Scale</h3>
+    <table>
+      <tr><th>Level</th><th>Font</th><th>Weight</th><th>Size</th><th>Use</th></tr>
+      <tr><td>Display</td><td>Fraunces</td><td>700</td><td>40–56px</td><td>Hero heading</td></tr>
+      <tr><td>H2</td><td>Fraunces</td><td>600</td><td>28–36px</td><td>Section headings</td></tr>
+      <tr><td>H3</td><td>Fraunces</td><td>600</td><td>18–22px</td><td>Sub-headings, card titles</td></tr>
+      <tr><td>Eyebrow</td><td>Figtree</td><td>700</td><td>11–12px</td><td>ALL CAPS, letter-spacing 0.14em</td></tr>
+      <tr><td>Body</td><td>Figtree</td><td>400</td><td>16–17px</td><td>Paragraphs, descriptions</td></tr>
+      <tr><td>Small</td><td>Figtree</td><td>400–500</td><td>13–14px</td><td>Captions, labels, footer</td></tr>
+      <tr><td>Button</td><td>Figtree</td><td>700</td><td>15–16px</td><td>CTA buttons</td></tr>
+    </table>
+
+    <h3>Fallback Fonts (when Google Fonts unavailable)</h3>
+    <p>Fraunces → <code>Georgia, Times New Roman, serif</code></p>
+    <p>Figtree → <code>system-ui, -apple-system, Segoe UI, Roboto, sans-serif</code></p>
+  </section>
+
+  <!-- 5. SPACING -->
+  <section class="ds" id="spacing">
+    <h2>5. Spacing &amp; Grid</h2>
+    <p>All spacing follows an 8px base unit. Common values:</p>
+
+    <div class="space-demo">
+      <div><div class="sp" style="width:8px;height:8px;"></div><p style="font-size:.75rem;text-align:center;color:var(--muted);margin-top:4px;">4px</p></div>
+      <div><div class="sp" style="width:16px;height:16px;"></div><p style="font-size:.75rem;text-align:center;color:var(--muted);margin-top:4px;">8px</p></div>
+      <div><div class="sp" style="width:24px;height:24px;"></div><p style="font-size:.75rem;text-align:center;color:var(--muted);margin-top:4px;">16px</p></div>
+      <div><div class="sp" style="width:32px;height:32px;"></div><p style="font-size:.75rem;text-align:center;color:var(--muted);margin-top:4px;">24px</p></div>
+      <div><div class="sp" style="width:48px;height:48px;"></div><p style="font-size:.75rem;text-align:center;color:var(--muted);margin-top:4px;">48px</p></div>
+      <div><div class="sp" style="width:64px;height:64px;"></div><p style="font-size:.75rem;text-align:center;color:var(--muted);margin-top:4px;">64px</p></div>
+      <div><div class="sp" style="width:96px;height:96px;"></div><p style="font-size:.75rem;text-align:center;color:var(--muted);margin-top:4px;">84px</p></div>
+    </div>
+
+    <h3>Border Radius</h3>
+    <table>
+      <tr><th>Element</th><th>Radius</th></tr>
+      <tr><td>Cards, panels, forms</td><td>18px</td></tr>
+      <tr><td>Buttons (pill shape)</td><td>999px</td></tr>
+      <tr><td>Chips, tags, badges</td><td>999px</td></tr>
+      <tr><td>Small elements (inputs, icons)</td><td>10–12px</td></tr>
+      <tr><td>Icon backgrounds</td><td>12px</td></tr>
+    </table>
+
+    <h3>Max Content Width</h3>
+    <p>Main content area: <strong>1080px</strong> max-width, centred. Section padding: <strong>84px</strong> top and bottom (64px on mobile).</p>
+  </section>
+
+  <!-- 6. USAGE RULES -->
+  <section class="ds" id="rules">
+    <h2>6. Usage Rules — Do and Don't</h2>
+
+    <div class="rules-grid">
+      <div class="rule-card rule-do">
+        <h4>✅ Correct Logo Use</h4>
+        <ul>
+          <li>Use the logo on the paper background or white</li>
+          <li>Use the reversed logo on dark green backgrounds</li>
+          <li>Keep the full clear space zone around the logo</li>
+          <li>Use the monochrome version for single-colour print</li>
+          <li>Scale proportionally — never distort</li>
+          <li>Use SVG files — they scale to any size perfectly</li>
+        </ul>
+      </div>
+      <div class="rule-card rule-dont">
+        <h4>❌ Incorrect Logo Use</h4>
+        <ul>
+          <li>Don't change any colours in the logo</li>
+          <li>Don't place the logo on a busy photograph</li>
+          <li>Don't rotate or skew the logo</li>
+          <li>Don't add shadows, glows, or outlines</li>
+          <li>Don't use the logo smaller than minimum sizes</li>
+          <li>Don't retype the name in a different font</li>
+        </ul>
+      </div>
+      <div class="rule-card rule-do">
+        <h4>✅ Correct Colour Use</h4>
+        <ul>
+          <li>Body text: always dark green or ink on light backgrounds</li>
+          <li>Amber on dark green: buttons, highlights, eyebrow labels</li>
+          <li>Amber as button background: dark text (#221603) only</li>
+          <li>Check contrast before using any new colour pair</li>
+        </ul>
+      </div>
+      <div class="rule-card rule-dont">
+        <h4>❌ Incorrect Colour Use</h4>
+        <ul>
+          <li>Don't use amber as body text on white — fails WCAG</li>
+          <li>Don't use white text on amber — fails WCAG</li>
+          <li>Don't introduce new colours without a contrast check</li>
+          <li>Don't use pure black (#000000) — use ink (#1A2A22)</li>
+          <li>Don't use pure white (#FFFFFF) for page bg — use paper (#F7F3EA)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Approved Colour Combinations (Text on Background)</h3>
+    <table>
+      <tr><th>Text</th><th>Background</th><th>Contrast</th><th>Use for</th></tr>
+      <tr><td style="color:#143A2E;font-weight:700;">#143A2E</td><td style="background:#F7F3EA;">#F7F3EA</td><td>12.1:1 AAA</td><td>Body text, headings on paper</td></tr>
+      <tr><td style="color:#F4EEE2;font-weight:700;background:#143A2E;">#F4EEE2</td><td style="background:#143A2E;">#143A2E</td><td>10.9:1 AAA</td><td>Text in hero/dark sections</td></tr>
+      <tr><td style="color:#221603;font-weight:700;background:#D29239;">#221603</td><td style="background:#D29239;">#D29239</td><td>6.9:1 AA</td><td>Button labels on amber</td></tr>
+      <tr><td style="color:#D29239;font-weight:700;background:#143A2E;">#D29239</td><td style="background:#143A2E;">#143A2E</td><td>4.7:1 AA</td><td>Highlights on dark green</td></tr>
+    </table>
+  </section>
+
+  <!-- 7. ILLUSTRATOR GUIDE -->
+  <section class="ds" id="illustrator">
+    <h2>7. Illustrator Setup Guide</h2>
+    <p>Complete steps for opening and using the logo files in Adobe Illustrator for mockups and print materials.</p>
+
+    <h3>Step 1 — Install the Fonts First</h3>
+    <ol style="color:var(--muted);padding-left:20px;">
+      <li>Go to <a href="https://fonts.google.com/specimen/Fraunces" target="_blank" rel="noopener">fonts.google.com/specimen/Fraunces</a></li>
+      <li>Click <strong>Download Family</strong> — extract the ZIP</li>
+      <li>Install <code>Fraunces-SemiBold.ttf</code> and <code>Fraunces-Bold.ttf</code></li>
+      <li>Repeat for <a href="https://fonts.google.com/specimen/Figtree" target="_blank" rel="noopener">Figtree</a> — install <code>Figtree-Medium.ttf</code> and <code>Figtree-Bold.ttf</code></li>
+      <li>Restart Illustrator after installing fonts</li>
+    </ol>
+
+    <h3>Step 2 — Open SVG Files</h3>
+    <ol style="color:var(--muted);padding-left:20px;">
+      <li>In Illustrator: <strong>File → Open</strong> → select any <code>.svg</code> file from the logos folder</li>
+      <li>In the SVG Options dialog: leave defaults (use SVG Profile: SVG 1.1)</li>
+      <li>The logo opens as an editable Illustrator document</li>
+      <li>All paths are already vectors — the icon mark requires no fonts</li>
+    </ol>
+
+    <h3>Step 3 — Outline the Text (Important)</h3>
+    <p>The name "Evergreen Learning Studio" and tagline in the logo are SVG <code>&lt;text&gt;</code> elements that reference fonts. To make them permanent paths (so they print on any computer without the fonts):</p>
+    <ol style="color:var(--muted);padding-left:20px;">
+      <li>Select all: <code>Ctrl+A</code> (Windows) / <code>Cmd+A</code> (Mac)</li>
+      <li>Menu: <strong>Type → Create Outlines</strong> (<code>Shift+Ctrl+O</code>)</li>
+      <li>Save as <code>.ai</code> file — the text is now permanent path data</li>
+      <li>This is required before sending to a printer</li>
+    </ol>
+
+    <h3>Setting Up a New Document for Print</h3>
+    <table>
+      <tr><th>Setting</th><th>Business Card</th><th>A4 Letterhead</th><th>Social Media</th></tr>
+      <tr><td>Size</td><td>90 × 55 mm</td><td>210 × 297 mm</td><td>1080 × 1080 px</td></tr>
+      <tr><td>Colour mode</td><td>CMYK</td><td>CMYK</td><td>RGB</td></tr>
+      <tr><td>Resolution</td><td>300 dpi</td><td>300 dpi</td><td>72–144 dpi</td></tr>
+      <tr><td>Bleed</td><td>3 mm all sides</td><td>3 mm all sides</td><td>None</td></tr>
+      <tr><td>Logo version</td><td>Stacked (03)</td><td>Horizontal (02)</td><td>Stacked or Icon (01/03)</td></tr>
+    </table>
+
+    <h3>CMYK Equivalents for Print</h3>
+    <table>
+      <tr><th>Colour</th><th>HEX</th><th>CMYK (approximate)</th></tr>
+      <tr><td>Forest Green 900</td><td>#143A2E</td><td>C:66 M:0 Y:21 K:77</td></tr>
+      <tr><td>Forest Green 800</td><td>#1B4537</td><td>C:61 M:0 Y:20 K:73</td></tr>
+      <tr><td>Warm Amber</td><td>#D29239</td><td>C:0 M:30 Y:73 K:18</td></tr>
+      <tr><td>Ink (body text)</td><td>#1A2A22</td><td>C:38 M:0 Y:19 K:84</td></tr>
+      <tr><td>Warm Paper</td><td>#F7F3EA</td><td>C:0 M:2 Y:5 K:3</td></tr>
+    </table>
+    <p style="font-size:.85rem;color:var(--muted);">⚠️ CMYK values are approximate. Always request a printed proof from your printer before a large print run. Colours vary between screens and print.</p>
+  </section>
+
+  <!-- 8. FILES -->
+  <section class="ds" id="files">
+    <h2>8. File Inventory</h2>
+    <table>
+      <tr><th>Filename</th><th>Format</th><th>Use</th></tr>
+      <tr><td><code>index.html</code></td><td>HTML</td><td>The complete website — open in VS Code to edit, deploy to Netlify</td></tr>
+      <tr><td><code>sample-special-education-teacher-resume.pdf</code></td><td>PDF</td><td>CV — must stay in same folder as index.html for download button to work</td></tr>
+      <tr><td><code>project-docs.html</code></td><td>HTML</td><td>Project documentation — this decision log</td></tr>
+      <tr><td><code>brand-guidelines.html</code></td><td>HTML</td><td>This fictional brand guidelines document</td></tr>
+      <tr><td><code>logos/01-icon-only.svg</code></td><td>SVG</td><td>Icon mark only — favicon, app icon, small spaces</td></tr>
+      <tr><td><code>logos/02-logo-primary-horizontal.svg</code></td><td>SVG</td><td>Main logo — website header, letterhead, email signature</td></tr>
+      <tr><td><code>logos/03-logo-primary-stacked.svg</code></td><td>SVG</td><td>Vertical logo — business card, social, square spaces</td></tr>
+      <tr><td><code>logos/04-logo-reversed.svg</code></td><td>SVG</td><td>Light-on-dark — hero sections, dark presentations</td></tr>
+      <tr><td><code>logos/05-logo-mono-dark.svg</code></td><td>SVG</td><td>Single colour dark — black-and-white print, stamps</td></tr>
+      <tr><td><code>logos/06-logo-mono-light.svg</code></td><td>SVG</td><td>Single colour light — white on dark backgrounds</td></tr>
+    </table>
+
+    <h3>Files Still to Create (Next Phase)</h3>
+    <table>
+      <tr><th>File</th><th>Format</th><th>Where to create</th></tr>
+      <tr><td>Business card front + back</td><td>.ai / .pdf</td><td>Adobe Illustrator — use stacked logo, brand colours</td></tr>
+      <tr><td>A4 letterhead template</td><td>.ai / .docx</td><td>Illustrator or Word — horizontal logo at top</td></tr>
+      <tr><td>Email signature</td><td>HTML snippet</td><td>Use icon + name in Fraunces + tagline in Figtree</td></tr>
+      <tr><td>Instagram/social template</td><td>.ai / .png</td><td>1080×1080px, stacked logo, green bg</td></tr>
+      <tr><td>sample-teacher-photo.jpg</td><td>JPG</td><td>Professional headshot — square crop, min 600×600px</td></tr>
+    </table>
+  </section>
+
+  <!-- 9. WCAG REFERENCE -->
+  <section class="ds" id="wcag-ref">
+    <h2>9. WCAG 2.2 Quick Reference</h2>
+    <p>Every new design material created for this brand must meet WCAG 2.2 Level AA minimum. These are the most important criteria to check.</p>
+    <table>
+      <tr><th>ID</th><th>Criterion</th><th>Minimum requirement</th></tr>
+      <tr><td>1.4.3</td><td>Contrast Minimum (AA)</td><td>Text: 4.5:1 · Large text (≥18pt or 14pt bold): 3:1</td></tr>
+      <tr><td>1.4.6</td><td>Contrast Enhanced (AAA)</td><td>Text: 7:1 · Aim for this on body text</td></tr>
+      <tr><td>1.4.11</td><td>Non-text Contrast</td><td>UI components: 3:1 against adjacent colours</td></tr>
+      <tr><td>2.4.7</td><td>Focus Visible</td><td>Keyboard focus indicator must be clearly visible</td></tr>
+      <tr><td>2.5.8</td><td>Target Size (new 2.2)</td><td>Interactive elements: minimum 24×24 CSS pixels</td></tr>
+      <tr><td>1.1.1</td><td>Alt Text</td><td>All images must have descriptive alt attributes</td></tr>
+      <tr><td>3.1.1</td><td>Language of Page</td><td>HTML lang attribute must be set correctly</td></tr>
+      <tr><td>2.4.11</td><td>Focus Not Obscured (new 2.2)</td><td>Sticky headers must not completely hide focused elements</td></tr>
+    </table>
+  </section>
+
+  <!-- 10. LINKS -->
+  <section class="ds" id="links">
+    <h2>10. External Reference Links</h2>
+
+    <h3>WCAG &amp; Accessibility</h3>
+    <div class="link-g">
+      <a class="lc" href="https://www.w3.org/TR/WCAG22/" target="_blank" rel="noopener"><div class="lcat">Standard</div><div class="ltt">WCAG 2.2 Full Text</div><div class="luu">w3.org/TR/WCAG22/</div></a>
+      <a class="lc" href="https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/" target="_blank" rel="noopener"><div class="lcat">Reference</div><div class="ltt">New in WCAG 2.2</div><div class="luu">w3.org/WAI/…/new-in-22/</div></a>
+      <a class="lc" href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener"><div class="lcat">Tool</div><div class="ltt">WebAIM Contrast Checker</div><div class="luu">webaim.org</div></a>
+      <a class="lc" href="https://wave.webaim.org/" target="_blank" rel="noopener"><div class="lcat">Tool</div><div class="ltt">WAVE Accessibility Scanner</div><div class="luu">wave.webaim.org</div></a>
+    </div>
+
+    <h3>Design &amp; Colour</h3>
+    <div class="link-g">
+      <a class="lc" href="https://color.adobe.com" target="_blank" rel="noopener"><div class="lcat">Tool</div><div class="ltt">Adobe Color</div><div class="luu">color.adobe.com</div></a>
+      <a class="lc" href="https://coolors.co/contrast-checker" target="_blank" rel="noopener"><div class="lcat">Tool</div><div class="ltt">Coolors Contrast Checker</div><div class="luu">coolors.co/contrast-checker</div></a>
+      <a class="lc" href="https://svgomg.net/" target="_blank" rel="noopener"><div class="lcat">Tool</div><div class="ltt">SVGOMG — Compress SVG</div><div class="luu">svgomg.net</div></a>
+      <a class="lc" href="https://www.canva.com" target="_blank" rel="noopener"><div class="lcat">Design</div><div class="ltt">Canva — Quick Mockups</div><div class="luu">canva.com</div></a>
+    </div>
+
+    <h3>Fonts</h3>
+    <div class="link-g">
+      <a class="lc" href="https://fonts.google.com/specimen/Fraunces" target="_blank" rel="noopener"><div class="lcat">Font</div><div class="ltt">Fraunces — Download</div><div class="luu">fonts.google.com</div></a>
+      <a class="lc" href="https://fonts.google.com/specimen/Figtree" target="_blank" rel="noopener"><div class="lcat">Font</div><div class="ltt">Figtree — Download</div><div class="luu">fonts.google.com</div></a>
+    </div>
+
+    <h3>Legal</h3>
+    <div class="link-g">
+      <a class="lc" href="https://www.kvkk.gov.tr/" target="_blank" rel="noopener"><div class="lcat">Law</div><div class="ltt">KVKK Official Authority</div><div class="luu">kvkk.gov.tr</div></a>
+      <a class="lc" href="https://verbis.kvkk.gov.tr/" target="_blank" rel="noopener"><div class="lcat">Registry</div><div class="ltt">VERBİS Registration</div><div class="luu">verbis.kvkk.gov.tr</div></a>
+    </div>
+  </section>
+
+  <p style="text-align:center;color:var(--muted);font-size:.82rem;margin-top:36px;padding-top:24px;border-top:1px solid var(--lg);">
+    Evergreen Learning Studio Brand Guidelines v1.0 · Fictional premium sample brand · 2026
+  </p>
+</main>
+</div>
+</body>
+</html>

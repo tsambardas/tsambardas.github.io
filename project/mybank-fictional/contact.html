@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us (Demo) | MyBank — Fictional Bank Website</title>
+    <meta name="description" content="Static demo of the MyBank enquiry form. Fictional student portfolio project by Tulay Tsambardas.">
+    <meta name="author" content="Tulay Tsambardas, tulaytsambardasdesign@gmail.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/credit.css">
+
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(images/loginbackground.png);
+            margin: 0;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 40px auto;
+            background: white;
+            padding: 20px;
+            border: 3px solid gray;
+            border-radius: 8px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        input[type=text],
+        input[type=email],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            background-color: orange;
+            color: black;
+            padding: 16px 28px;
+            margin: 4px 2px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        input[type=reset] {
+            padding: 16px 28px;
+            margin: 4px 2px;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            background-color: #f44336;
+            color: white;
+        }
+
+        input[type=submit]:hover,
+        input[type=reset]:hover {
+            opacity: 0.8;
+        }
+
+        .demo-note {
+            font-size: 12px;
+            background: #eef6f0;
+            border: 1px solid #73ac7e;
+            border-radius: 6px;
+            padding: 8px 10px;
+            color: #2f5138;
+            font-weight: normal;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="demo-banner">Fictional website — demo form only. Nothing is sent or stored.
+        <a href="mybank_index.html">Back to MyBank home</a>
+    </div>
+
+    <form id="enquiryForm">
+        <h2>Enquiry form</h2>
+        <p>Please fill in this form and send us.</p>
+
+        <p class="demo-note">
+            <strong>Demo version:</strong> this page imitates my PHP enquiry form
+            (<code>contact.php</code>, with server-side validation and sanitising) so it can run on
+            static hosting. No message is actually sent.
+        </p>
+
+        <p id="formSuccess" class="success" style="display:none;">
+            Thank you! In the PHP version your enquiry would now be validated and saved to the MySQL database.
+        </p>
+
+        <p>
+            <label for="inputName">Name:<sup>*</sup></label>
+            <input type="text" name="name" id="inputName" required>
+        </p>
+        <p>
+            <label for="inputEmail">Email:<sup>*</sup></label>
+            <input type="email" name="email" id="inputEmail" required>
+        </p>
+        <p>
+            <label for="inputSubject">Subject:</label>
+            <input type="text" name="subject" id="inputSubject" required>
+        </p>
+        <p>
+            <label for="inputComment">Message:<sup>*</sup></label>
+            <textarea name="message" id="inputComment" rows="5" cols="30" required></textarea>
+        </p>
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+    </form>
+
+    <footer class="site-credit">
+        <p class="credit-monogram">TT</p>
+        <p class="credit-name">Tulay Tsambardas</p>
+        <p class="credit-role">Digital Designer</p>
+        <p class="credit-copy">&copy; 2026 All rights reserved.</p>
+        <p class="credit-note">MyBank is a fictional brand created for a student project. It is not a real bank and
+            does not collect or store any personal information.</p>
+    </footer>
+
+    <script>
+        document.getElementById("enquiryForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.getElementById("formSuccess").style.display = "block";
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>

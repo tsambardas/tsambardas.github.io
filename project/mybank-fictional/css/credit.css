@@ -1,0 +1,61 @@
+/* ============================================================
+   Fictional-site notice + designer credit
+   Tulay Tsambardas (TT) — Digital Designer — 2026
+   ============================================================ */
+
+/* Slim banner at the top of every page */
+.demo-banner {
+  background: #115973;
+  color: #ffffff;
+  text-align: center;
+  font-size: 13px;
+  padding: 7px 12px;
+  letter-spacing: 0.3px;
+}
+
+.demo-banner a {
+  color: #ffd28a;
+  text-decoration: underline;
+}
+
+/* Designer credit bar below the site footer */
+.site-credit {
+  background: #0e2a36;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 16px 24px;
+}
+
+.site-credit .credit-monogram {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.site-credit .credit-name {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0 2px;
+}
+
+.site-credit .credit-role {
+  font-size: 13px;
+  color: #9fb8c4;
+  margin: 0 0 12px;
+}
+
+.site-credit .credit-copy {
+  font-size: 11px;
+  color: #7f98a4;
+  margin: 0;
+}
+
+.site-credit .credit-note {
+  font-size: 11px;
+  color: #7f98a4;
+  margin: 8px auto 0;
+  max-width: 640px;
+  line-height: 1.5;
+}
