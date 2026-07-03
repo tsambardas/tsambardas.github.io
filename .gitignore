@@ -1,0 +1,9 @@
+# Private archive — old versions and working files, never uploaded to GitHub
+_archive/
+
+# System and temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+.~lock.*
+desktop.ini
